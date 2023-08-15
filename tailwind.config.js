@@ -7,7 +7,13 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
         inter: ["Inter", "sans-serif"],
       },
+      colors: {
+        gray: "#F5F0EC",
+        beige: "#DCC1AB",
+        green: "#1B5B31",
+        black: "#111111",
+      },
     },
   },
   plugins: [],
-}
+};
