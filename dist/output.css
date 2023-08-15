@@ -536,6 +536,16 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.bg-slate-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+}
+
+.bg-stone-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 244 / var(--tw-bg-opacity));
+}
+
 .font-montserrat{
   font-family: Montserrat, sans-serif;
 }
