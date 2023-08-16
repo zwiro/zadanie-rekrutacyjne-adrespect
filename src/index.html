@@ -8,7 +8,7 @@
     <title>GiardDesign | Nowoczesne ogrody</title>
   </head>
 
-  <body class="bg-gray font-inter">
+  <body class="bg-gray font-inter text-black">
     <header>
       <nav class="flex bg-white px-[89px] py-6">
         <h1>
@@ -33,16 +33,18 @@
           </li>
         </ul>
       </nav>
-      <div class="flex h-screen bg-beige pl-[89px]">
-        <div class="my-auto flex w-1/2 flex-col pr-80">
-          <p class="font-montserrat text-6xl font-medium">
-            Nowoczesna aranżacja Twojego ogrodu
-          </p>
-          <p class="pb-[72px] pt-11">
-            Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
-            realizacji. Oferujemy kompleksowy zakres usług z&nbsp;indywidualnym
-            podejściem do każdego projektu.
-          </p>
+      <div class="flex h-screen gap-16 bg-beige">
+        <div class="my-auto flex w-1/2 flex-col gap-[72px] pl-[89px]">
+          <div class="flex flex-col gap-11">
+            <p class="font-montserrat text-6xl font-medium">
+              Nowoczesna aranżacja Twojego&nbsp;ogrodu
+            </p>
+            <p class="w-5/6">
+              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+              realizacji. Oferujemy kompleksowy zakres usług
+              z&nbsp;indywidualnym podejściem do każdego projektu.
+            </p>
+          </div>
           <div class="flex gap-9">
             <a class="block w-fit rounded-full bg-green px-6 py-3 text-gray">
               Skontaktuj się z nami
@@ -59,7 +61,7 @@
           <img
             src="./assets/hero-1.jpg"
             alt="Rośliny w ogrodzie w widoku z góry"
-            class="h-full w-full"
+            class="h-full w-full object-cover"
           />
           <div class="absolute bottom-0 right-0 flex gap-8 bg-gray px-8 py-6">
             <button aria-label="Poprzedni slajd">
@@ -77,29 +79,36 @@
       </div>
     </header>
 
-    <section class="min-h-screen px-[89px] pb-24">
-      <div class="px-[200px] pb-24 pt-[120px]">
+    <section class="flex h-screen flex-col gap-24 px-[89px] pb-40 pt-[120px]">
+      <div class="mx-auto flex w-10/12 flex-col gap-4">
         <h2 class="text-xs text-green">Oferta</h2>
-        <p class="pb-8 pt-4 font-montserrat text-5xl font-medium">
-          Działamy <em class="font-inter italic">kompleksowo</em>
-        </p>
-        <p class="w-2/3">
-          Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy
-          nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla
-          Ciebie projekt, zwizualizujemy go i wcielimy w&nbsp;życie, a na każdym
-          etapie posłużymy radą i wieloletnim doświadczeniem.
-        </p>
+        <div class="flex flex-col gap-8">
+          <p class="font-montserrat text-5xl font-medium">
+            Działamy <em class="font-inter italic">kompleksowo</em>
+          </p>
+          <p class="w-[70%]">
+            Oferujemy kompletną obsługę inwestycji terenów zielonych.
+            Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
+            Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy
+            w&nbsp;życie, a na każdym etapie posłużymy radą i wieloletnim
+            doświadczeniem.
+          </p>
+        </div>
       </div>
       <div class="flex gap-16">
-        <div class="rounded-3xl bg-white px-10 py-12">
-          <img src="./assets/pencil.svg" alt="" />
-          <h3 class="pb-3 pt-8 font-montserrat text-[28px] font-medium">
-            Projekty
-          </h3>
-          <p class="text-sm">
-            Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
-            wykorzystaniem istniejącej przestrzeni.
-          </p>
+        <div
+          class="flex flex-col justify-between rounded-3xl bg-white px-10 py-12"
+        >
+          <div class="flex flex-col items-start gap-8">
+            <img src="./assets/pencil.svg" alt="" class="" />
+            <div class="flex flex-col gap-3">
+              <h3 class="font-montserrat text-[28px] font-medium">Projekty</h3>
+              <p class="text-sm">
+                Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
+                wykorzystaniem istniejącej przestrzeni.
+              </p>
+            </div>
+          </div>
           <a
             href="#"
             class="flex w-fit gap-2.5 border-b border-green pt-16 text-green"
@@ -107,15 +116,21 @@
             <img src="./assets/arrow-thin.svg" alt="" />
           </a>
         </div>
-        <div class="rounded-3xl bg-white px-10 py-12">
-          <img src="./assets/eye.svg" alt="" />
-          <h3 class="pb-3 pt-8 font-montserrat text-[28px] font-medium">
-            Wizualizacje
-          </h3>
-          <p class="text-sm">
-            Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru
-            animowanego w technologii 3D.
-          </p>
+        <div
+          class="flex flex-col justify-between rounded-3xl bg-white px-10 py-12"
+        >
+          <div class="flex flex-col items-start gap-8">
+            <img src="./assets/eye.svg" alt="" class="" />
+            <div class="flex flex-col gap-3">
+              <h3 class="font-montserrat text-[28px] font-medium">
+                Wizualizacje
+              </h3>
+              <p class="text-sm">
+                Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego
+                spaceru animowanego w technologii 3D.
+              </p>
+            </div>
+          </div>
           <a
             href="#"
             class="flex w-fit gap-2.5 border-b border-green pt-16 text-green"
@@ -123,20 +138,62 @@
             <img src="./assets/arrow-thin.svg" alt="" />
           </a>
         </div>
-        <div class="rounded-3xl bg-white px-10 py-12">
-          <img src="./assets/stars.svg" alt="" />
-          <h3 class="pb-3 pt-8 font-montserrat text-[28px] font-medium">
-            Projekty
-          </h3>
-          <p class="text-sm">
-            Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i
-            zaawansowanych technologii.
-          </p>
+        <div
+          class="flex flex-col justify-between rounded-3xl bg-white px-10 py-12"
+        >
+          <div class="flex flex-col items-start gap-8">
+            <img src="./assets/stars.svg" alt="" class="" />
+            <div class="flex flex-col gap-3">
+              <h3 class="font-montserrat text-[28px] font-medium">
+                Realizacje
+              </h3>
+              <p class="text-sm">
+                Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i
+                zaawansowanych technologii.
+              </p>
+            </div>
+          </div>
           <a
             href="#"
             class="flex w-fit gap-2.5 border-b border-green pt-16 text-green"
             >Zobacz nasze realizacje
             <img src="./assets/arrow-thin.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex h-screen gap-16 bg-green">
+      <div class="w-1/2">
+        <img
+          src="./assets/about.jpg"
+          alt="Ogród z widoczną na środku ścieżką z kamyków"
+          class="h-full w-full object-cover"
+        />
+      </div>
+      <div class="my-auto w-1/2 pl-24 text-gray">
+        <div class="flex flex-col gap-[72px] pr-[89px]">
+          <div class="flex flex-col gap-4">
+            <h2 class="text-xs">O firmie</h2>
+            <div class="flex flex-col gap-10">
+              <p class="w-1/2 font-montserrat text-5xl font-medium">
+                Tworzymy <em class="font-inter italic">z pasją</em>
+              </p>
+              <p>
+                Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
+                wykwalifikowani projektanci oraz architekci, których zadaniem
+                jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza
+                specjalizacja to przestrzenie nowoczesne, które charakteryzuje
+                minimalizm, geometria i elegancka prostota. Tworzymy ogrody
+                małoobsługowe, dostosowane do współczesnego trybu życia.
+              </p>
+            </div>
+          </div>
+          <a
+            href="#"
+            class="flex w-fit gap-2 rounded-full border border-gray px-5 py-3"
+            >Poznaj nas bliżej
+            <img src="./assets/arrow-thin-gray.svg" alt="" />
           </a>
         </div>
       </div>
