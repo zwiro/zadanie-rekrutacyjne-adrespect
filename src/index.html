@@ -11,11 +11,11 @@
 
   <body class="bg-gray font-inter text-black">
     <header>
-      <nav class="flex bg-white px-[89px] py-6">
+      <nav class="flex items-center bg-white px-8 py-6 sm:px-16 lg:px-[89px]">
         <h1>
           <img src="./assets/giarddesign.svg" alt="GiardDesign" />
         </h1>
-        <ul class="ml-auto flex gap-12">
+        <ul class="ml-auto hidden gap-4 sm:flex md:gap-12">
           <li>
             <a>
               Oferta
@@ -34,10 +34,16 @@
           </li>
         </ul>
       </nav>
-      <div class="flex h-screen gap-16 bg-beige">
-        <div class="my-auto flex w-1/2 flex-col gap-[72px] pl-[89px]">
-          <div class="flex flex-col gap-11">
-            <p class="font-montserrat text-6xl font-medium">
+      <div
+        class="flex h-screen min-h-[650px] flex-col gap-4 bg-beige sm:flex-row lg:gap-16"
+      >
+        <div
+          class="my-auto flex h-5/6 flex-col justify-center gap-8 px-8 sm:h-auto sm:w-3/4 sm:gap-[72px] sm:px-16 sm:pl-16 lg:pl-[89px] xl:w-1/2"
+        >
+          <div class="flex flex-col gap-5 sm:gap-11">
+            <p
+              class="font-montserrat text-2xl font-medium sm:text-4xl xl:text-6xl"
+            >
               Nowoczesna aranżacja Twojego&nbsp;ogrodu
             </p>
             <p class="w-5/6">
@@ -46,7 +52,7 @@
               z&nbsp;indywidualnym podejściem do każdego projektu.
             </p>
           </div>
-          <div class="flex gap-9">
+          <div class="flex w-fit flex-wrap gap-4 sm:gap-9">
             <a class="rounded-full bg-green px-6 py-3 text-gray">
               Skontaktuj się z nami
             </a>
@@ -58,7 +64,7 @@
             </a>
           </div>
         </div>
-        <div class="relative w-1/2">
+        <div class="relative h-1/6 sm:h-auto sm:w-1/4 xl:w-1/2">
           <img
             src="./assets/hero-1.jpg"
             alt="Rośliny w ogrodzie w widoku z góry"
@@ -83,15 +89,17 @@
     <main>
       <section
         id="oferta"
-        class="flex h-screen flex-col gap-24 px-[89px] pb-40 pt-[120px]"
+        class="flex min-h-screen flex-col gap-8 px-8 pb-16 pt-16 sm:gap-16 sm:px-16 sm:pb-40 lg:gap-24 lg:px-[89px] lg:pt-[120px]"
       >
-        <div class="mx-auto flex w-10/12 flex-col gap-4">
+        <div class="flex flex-col gap-4 sm:w-10/12 lg:mx-auto">
           <h2 class="text-xs text-green">Oferta</h2>
-          <div class="flex flex-col gap-8">
-            <p class="font-montserrat text-5xl font-medium">
+          <div class="flex flex-col gap-4 sm:gap-8">
+            <p
+              class="font-montserrat text-2xl font-medium sm:text-4xl lg:text-5xl"
+            >
               Działamy <em class="font-inter italic">kompleksowo</em>
             </p>
-            <p class="w-[70%]">
+            <p class="sm:w-[70%]">
               Oferujemy kompletną obsługę inwestycji terenów zielonych.
               Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
               Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy
@@ -100,14 +108,14 @@
             </p>
           </div>
         </div>
-        <div class="flex gap-16">
+        <div class="flex flex-col gap-8 sm:gap-16 lg:flex-row">
           <div
-            class="flex flex-col justify-between rounded-3xl bg-white px-10 py-12"
+            class="flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12"
           >
             <div class="flex flex-col items-start gap-8">
               <img src="./assets/pencil.svg" alt="" class="" />
               <div class="flex flex-col gap-3">
-                <h3 class="font-montserrat text-[28px] font-medium">
+                <h3 class="font-montserrat text-2xl font-medium xl:text-[28px]">
                   Projekty
                 </h3>
                 <p class="text-sm">
@@ -124,12 +132,12 @@
             </a>
           </div>
           <div
-            class="flex flex-col justify-between rounded-3xl bg-white px-10 py-12"
+            class="flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12"
           >
             <div class="flex flex-col items-start gap-8">
               <img src="./assets/eye.svg" alt="" class="" />
               <div class="flex flex-col gap-3">
-                <h3 class="font-montserrat text-[28px] font-medium">
+                <h3 class="font-montserrat text-2xl font-medium xl:text-[28px]">
                   Wizualizacje
                 </h3>
                 <p class="text-sm">
@@ -146,12 +154,12 @@
             </a>
           </div>
           <div
-            class="flex flex-col justify-between rounded-3xl bg-white px-10 py-12"
+            class="flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12"
           >
             <div class="flex flex-col items-start gap-8">
               <img src="./assets/stars.svg" alt="" class="" />
               <div class="flex flex-col gap-3">
-                <h3 class="font-montserrat text-[28px] font-medium">
+                <h3 class="font-montserrat text-2xl font-medium xl:text-[28px]">
                   Realizacje
                 </h3>
                 <p class="text-sm">
@@ -170,20 +178,29 @@
         </div>
       </section>
 
-      <section id="o-firmie" class="flex h-screen gap-16 bg-green">
-        <div class="w-1/2">
+      <section
+        id="o-firmie"
+        class="flex min-h-screen flex-col gap-4 bg-green sm:h-screen sm:flex-row lg:gap-16"
+      >
+        <div class="h-1/6 sm:h-auto sm:w-1/4 xl:w-1/2">
           <img
             src="./assets/about.jpg"
             alt="Ogród z widoczną na środku ścieżką z kamyków"
-            class="h-full w-full object-cover"
+            class="h-full max-h-[110px] w-full object-cover sm:max-h-full"
           />
         </div>
-        <div class="my-auto w-1/2 pl-24 text-gray">
-          <div class="flex flex-col gap-[72px] pr-[89px]">
+        <div
+          class="my-auto h-5/6 px-8 text-gray sm:h-auto sm:w-3/4 sm:pl-16 lg:pl-24 xl:w-1/2"
+        >
+          <div
+            class="flex flex-col gap-8 pb-16 pt-12 sm:gap-[72px] sm:py-0 sm:pr-[89px]"
+          >
             <div class="flex flex-col gap-4">
               <h2 class="text-xs">O firmie</h2>
-              <div class="flex flex-col gap-10">
-                <p class="w-1/2 font-montserrat text-5xl font-medium">
+              <div class="flex flex-col gap-5 sm:gap-10">
+                <p
+                  class="w-1/2 font-montserrat text-2xl font-medium sm:text-4xl lg:text-5xl"
+                >
                   Tworzymy <em class="font-inter italic">z pasją</em>
                 </p>
                 <p>
@@ -198,7 +215,7 @@
             </div>
             <a
               href="#"
-              class="flex w-fit items-center gap-2 rounded-full border border-gray px-5 py-3"
+              class="flex w-fit items-center gap-2 rounded-full border border-gray px-6 py-3"
             >
               Poznaj nas bliżej
               <img src="./assets/arrow-thin-gray.svg" alt="" class="h-4 w-4" />
@@ -209,7 +226,7 @@
 
       <section
         id="realizacje"
-        class="relative flex max-h-[250vh] flex-col gap-24 overflow-hidden bg-beige pb-11 pt-[120px] transition-all duration-300"
+        class="relative flex max-h-[250vh] flex-col gap-8 overflow-hidden bg-beige pb-11 pt-16 transition-all duration-300 sm:gap-16 lg:gap-24 lg:pt-[120px]"
       >
         <div
           id="images-overlay"
@@ -217,13 +234,15 @@
         ></div>
         <button
           id="expand-images-btn"
-          class="absolute bottom-[45.5px] left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 rounded-full border border-black px-5 py-3"
+          class="absolute bottom-[45.5px] left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 rounded-full border border-black px-6 py-3"
         >
           Rozwiń <img src="./assets/arrow-down-black.svg" alt="" />
         </button>
-        <div class="flex flex-col gap-4 pl-40">
+        <div class="flex flex-col gap-4 pl-8 sm:pl-16 lg:pl-40">
           <h2 class="text-xs text-green">Realizacje</h2>
-          <p class="font-montserrat text-5xl font-medium">
+          <p
+            class="font-montserrat text-2xl font-medium sm:text-4xl lg:text-5xl"
+          >
             Nasze <em class="font-inter italic">projekty</em>
           </p>
         </div>
@@ -249,14 +268,14 @@
 
       <section class="py-[60px] text-gray">
         <div
-          class="mx-auto flex w-10/12 justify-between gap-24 bg-green px-[110px] py-[120px]"
+          class="mx-auto my-auto flex w-10/12 flex-col justify-between gap-4 bg-green px-8 py-16 sm:px-[110px] sm:py-[120px] md:flex-row md:gap-24"
         >
-          <p class="font-montserrat text-[40px]">
+          <p class="font-montserrat text-[32px] lg:text-[40px]">
             Zostańmy w kontakcie! <br />
             Znajdziesz nas na
             <em class="font-inter font-medium italic">Instagramie.</em>
           </p>
-          <div class="flex w-1/6 flex-col items-start gap-6">
+          <div class="my-auto flex flex-col items-start gap-6 md:w-1/6">
             <p>Śledź nasze najnowsze realizacje!</p>
             <button class="rounded-full bg-gray px-6 py-3 text-green">
               Instagram
@@ -268,12 +287,16 @@
 
     <footer
       id="kontakt"
-      class="flex flex-col gap-[120px] bg-black px-[200px] py-20 text-gray"
+      class="flex flex-col gap-8 bg-black px-16 py-20 text-gray lg:gap-[120px] lg:px-[200px]"
     >
-      <div class="flex flex-col gap-[62px]">
-        <div class="flex items-center">
+      <div class="flex flex-col gap-8 lg:gap-[62px]">
+        <div
+          class="flex flex-col items-start gap-4 md:gap-0 lg:flex-row lg:items-center"
+        >
           <img src="./assets/giarddesign.svg" alt="" class="invert" />
-          <div class="ml-auto flex items-center gap-6">
+          <div
+            class="flex flex-wrap items-center gap-4 text-sm lg:ml-auto lg:gap-6 xl:text-base"
+          >
             <p>Daj znać, co możemy dla Ciebie zrobić!</p>
             <button class="rounded-full bg-green px-6 py-3 text-gray">
               Skontaktuj się z nami
@@ -281,22 +304,22 @@
           </div>
         </div>
         <hr />
-        <div class="flex text-sm">
-          <ul class="flex gap-12">
+        <div class="flex flex-col gap-4 text-sm xl:flex-row xl:gap-0">
+          <ul class="flex flex-wrap gap-2 md:gap-4 lg:gap-12">
             <li>Kontakt</li>
             <li>Instagram</li>
             <li>Facebook</li>
             <li>LinkedIn</li>
           </ul>
-          <ul class="ml-auto flex gap-12">
+          <ul class="flex flex-wrap gap-2 md:gap-4 lg:gap-12 xl:ml-auto">
             <li>000-000-000</li>
             <li>giarddesign@kontakt.pl</li>
           </ul>
         </div>
       </div>
-      <div class="flex">
+      <div class="flex flex-col gap-4 lg:flex-row lg:gap-0">
         <p>Prawa zastrzeżone &copy; 2022</p>
-        <p class="ml-auto flex gap-4">
+        <p class="flex gap-4 lg:ml-auto">
           made by <img src="./assets/adrespect.svg" alt="" />
         </p>
       </div>
