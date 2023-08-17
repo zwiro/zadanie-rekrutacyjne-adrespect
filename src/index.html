@@ -23,9 +23,9 @@
               </button>
             </a>
           </li>
-          <li><a>O firmie</a></li>
-          <li><a>Realizacje</a></li>
-          <li><a>Kontakt</a></li>
+          <li><a href="#o-firmie">O firmie</a></li>
+          <li><a href="#realizacje">Realizacje</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
           <li>
             <button aria-label="Otwórz wyszukiwarkę">
               <img src="./assets/glass.svg" alt="Ikona lupy" />
@@ -46,14 +46,14 @@
             </p>
           </div>
           <div class="flex gap-9">
-            <a class="block w-fit rounded-full bg-green px-6 py-3 text-gray">
+            <a class="rounded-full bg-green px-6 py-3 text-gray">
               Skontaktuj się z nami
             </a>
             <a
-              class="flex w-fit gap-2 rounded-full border border-green px-6 py-3 text-green"
+              class="flex items-center gap-2 rounded-full border border-green px-6 py-3 text-green"
             >
               Zobacz nasze realizacje
-              <img src="./assets/arrow-down.svg" alt="" />
+              <img src="./assets/arrow-down.svg" alt="" class="h-4 w-4" />
             </a>
           </div>
         </div>
@@ -79,7 +79,10 @@
       </div>
     </header>
 
-    <section class="flex h-screen flex-col gap-24 px-[89px] pb-40 pt-[120px]">
+    <section
+      id="oferta"
+      class="flex h-screen flex-col gap-24 px-[89px] pb-40 pt-[120px]"
+    >
       <div class="mx-auto flex w-10/12 flex-col gap-4">
         <h2 class="text-xs text-green">Oferta</h2>
         <div class="flex flex-col gap-8">
@@ -111,9 +114,9 @@
           </div>
           <a
             href="#"
-            class="flex w-fit gap-2.5 border-b border-green pt-16 text-green"
+            class="flex w-fit items-center gap-2.5 border-b border-green pt-16 text-green"
             >Dowiedz się więcej
-            <img src="./assets/arrow-thin.svg" alt="" />
+            <img src="./assets/arrow-thin.svg" alt="" class="h-4 w-4" />
           </a>
         </div>
         <div
@@ -133,9 +136,9 @@
           </div>
           <a
             href="#"
-            class="flex w-fit gap-2.5 border-b border-green pt-16 text-green"
+            class="flex w-fit items-center gap-2.5 border-b border-green pt-16 text-green"
             >Dowiedz się więcej
-            <img src="./assets/arrow-thin.svg" alt="" />
+            <img src="./assets/arrow-thin.svg" alt="" class="h-4 w-4" />
           </a>
         </div>
         <div
@@ -155,15 +158,15 @@
           </div>
           <a
             href="#"
-            class="flex w-fit gap-2.5 border-b border-green pt-16 text-green"
+            class="flex w-fit items-center gap-2.5 border-b border-green pt-16 text-green"
             >Zobacz nasze realizacje
-            <img src="./assets/arrow-thin.svg" alt="" />
+            <img src="./assets/arrow-thin.svg" alt="" class="h-4 w-4" />
           </a>
         </div>
       </div>
     </section>
 
-    <section class="flex h-screen gap-16 bg-green">
+    <section id="o-firmie" class="flex h-screen gap-16 bg-green">
       <div class="w-1/2">
         <img
           src="./assets/about.jpg"
@@ -191,15 +194,17 @@
           </div>
           <a
             href="#"
-            class="flex w-fit gap-2 rounded-full border border-gray px-5 py-3"
-            >Poznaj nas bliżej
-            <img src="./assets/arrow-thin-gray.svg" alt="" />
+            class="flex w-fit items-center gap-2 rounded-full border border-gray px-5 py-3"
+          >
+            Poznaj nas bliżej
+            <img src="./assets/arrow-thin-gray.svg" alt="" class="h-4 w-4" />
           </a>
         </div>
       </div>
     </section>
 
     <section
+      id="realizacje"
       class="relative flex h-screen flex-col gap-24 overflow-hidden bg-beige pb-11 pt-[120px]"
     >
       <button
@@ -255,10 +260,11 @@
     </section>
 
     <footer
+      id="kontakt"
       class="flex flex-col gap-[120px] bg-black px-[200px] py-20 text-gray"
     >
       <div class="flex flex-col gap-[62px]">
-        <div class="flex">
+        <div class="flex items-center">
           <img src="./assets/giarddesign.svg" alt="" class="invert" />
           <div class="ml-auto flex items-center gap-6">
             <p>Daj znać, co możemy dla Ciebie zrobić!</p>
