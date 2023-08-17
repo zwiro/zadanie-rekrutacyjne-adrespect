@@ -209,12 +209,14 @@
 
       <section
         id="realizacje"
-        class="relative flex h-[250vh] flex-col gap-24 overflow-hidden bg-beige pb-11 pt-[120px]"
+        class="relative flex max-h-[250vh] flex-col gap-24 overflow-hidden bg-beige pb-11 pt-[120px] transition-all duration-300"
       >
         <div
-          class="absolute inset-0 z-10 w-full bg-gradient-to-b from-beige/0 to-beige/100"
+          id="images-overlay"
+          class="absolute inset-0 z-10 w-full bg-gradient-to-b from-beige/0 to-beige/100 transition-opacity"
         ></div>
         <button
+          id="expand-images-btn"
           class="absolute bottom-[45.5px] left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 rounded-full border border-black px-5 py-3"
         >
           Rozwiń <img src="./assets/arrow-down-black.svg" alt="" />
@@ -304,6 +306,7 @@
       defer
       src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"
     ></script>
-    <script defer src="./js/masonry.js" type="module"></script>
+    <script defer src="./js/masonry.js"></script>
+    <script defer src="./js/main.js"></script>
   </body>
 </html>

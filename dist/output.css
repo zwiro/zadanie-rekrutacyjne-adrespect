@@ -556,24 +556,12 @@ video {
   bottom: 45.5px;
 }
 
-.left-0{
-  left: 0px;
-}
-
 .left-1\/2{
   left: 50%;
 }
 
 .right-0{
   right: 0px;
-}
-
-.top-0{
-  top: 0px;
-}
-
-.-bottom-40{
-  bottom: -10rem;
 }
 
 .z-10{
@@ -598,8 +586,20 @@ video {
   display: flex;
 }
 
+.grid{
+  display: grid;
+}
+
+.hidden{
+  display: none;
+}
+
 .h-4{
   height: 1rem;
+}
+
+.h-\[250vh\]{
+  height: 250vh;
 }
 
 .h-full{
@@ -610,20 +610,12 @@ video {
   height: 100vh;
 }
 
-.h-\[200vh\]{
-  height: 200vh;
+.max-h-\[250vh\]{
+  max-height: 250vh;
 }
 
-.h-\[400vh\]{
-  height: 400vh;
-}
-
-.h-\[300vh\]{
-  height: 300vh;
-}
-
-.h-\[250vh\]{
-  height: 250vh;
+.max-h-\[1000vh\]{
+  max-height: 1000vh;
 }
 
 .w-1\/2{
@@ -667,6 +659,23 @@ video {
 .rotate-180{
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-45{
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.grid-rows-none{
+  grid-template-rows: none;
+}
+
+.grid-rows-\[0\]{
+  grid-template-rows: 0;
+}
+
+.grid-rows-\[0fr\]{
+  grid-template-rows: 0fr;
 }
 
 .flex-col{
@@ -980,7 +989,31 @@ video {
   color: rgb(27 91 49 / var(--tw-text-opacity));
 }
 
+.opacity-0{
+  opacity: 0;
+}
+
 .invert{
   --tw-invert: invert(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-opacity{
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-1000{
+  transition-duration: 1000ms;
+}
+
+.duration-300{
+  transition-duration: 300ms;
 }
