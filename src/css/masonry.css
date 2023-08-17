@@ -1,0 +1,9 @@
+.masonry-grid-item {
+  --columns: 3;
+  --gutter: 40;
+  margin-bottom: calc(var(--gutter) * 1px);
+  width: calc(
+    (100vw / var(--columns)) -
+      (var(--gutter) * (var(--columns) - 1) / var(--columns) * 1px)
+  );
+}
