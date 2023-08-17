@@ -53,14 +53,22 @@
             </p>
           </div>
           <div class="flex w-fit flex-wrap gap-4 sm:gap-9">
-            <a class="rounded-full bg-green px-6 py-3 text-gray">
+            <a
+              href="#"
+              class="cursor-pointer rounded-full bg-green px-6 py-3 text-gray transition-all hover:shadow hover:shadow-green hover:brightness-110 active:shadow-inner active:shadow-black active:brightness-90"
+            >
               Skontaktuj się z nami
             </a>
             <a
-              class="flex items-center gap-2 rounded-full border border-green px-6 py-3 text-green"
+              href="#"
+              class="group flex cursor-pointer items-center gap-2 rounded-full border border-green px-6 py-3 text-green transition-all hover:shadow hover:shadow-green hover:brightness-110 active:shadow-inner active:shadow-black active:brightness-90"
             >
               Zobacz nasze realizacje
-              <img src="./assets/arrow-down.svg" alt="" class="h-4 w-4" />
+              <img
+                src="./assets/arrow-down.svg"
+                alt=""
+                class="h-4 w-4 group-focus-within:animate-bounce group-hover:animate-bounce"
+              />
             </a>
           </div>
         </div>
@@ -110,7 +118,7 @@
         </div>
         <div class="flex flex-col gap-8 sm:gap-16 lg:flex-row">
           <div
-            class="flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12"
+            class="flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition-transform hover:scale-105 hover:shadow-lg"
           >
             <div class="flex flex-col items-start gap-8">
               <img src="./assets/pencil.svg" alt="" class="" />
@@ -126,13 +134,17 @@
             </div>
             <a
               href="#"
-              class="flex w-fit items-center gap-2.5 border-b border-green pt-16 text-green"
+              class="group relative mt-16 flex w-fit items-center gap-2.5 text-green after:absolute after:-bottom-1 after:h-px after:w-full after:bg-green after:transition-all hover:after:w-[110%]"
               >Dowiedz się więcej
-              <img src="./assets/arrow-thin.svg" alt="" class="h-4 w-4" />
+              <img
+                src="./assets/arrow-thin.svg"
+                alt=""
+                class="h-4 w-4 transition-transform group-hover:translate-x-4"
+              />
             </a>
           </div>
           <div
-            class="flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12"
+            class="flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition-transform hover:scale-105 hover:shadow-lg"
           >
             <div class="flex flex-col items-start gap-8">
               <img src="./assets/eye.svg" alt="" class="" />
@@ -148,13 +160,17 @@
             </div>
             <a
               href="#"
-              class="flex w-fit items-center gap-2.5 border-b border-green pt-16 text-green"
+              class="group relative mt-16 flex w-fit items-center gap-2.5 text-green after:absolute after:-bottom-1 after:h-px after:w-full after:bg-green after:transition-all hover:after:w-[110%]"
               >Dowiedz się więcej
-              <img src="./assets/arrow-thin.svg" alt="" class="h-4 w-4" />
+              <img
+                src="./assets/arrow-thin.svg"
+                alt=""
+                class="h-4 w-4 transition-transform group-hover:translate-x-4"
+              />
             </a>
           </div>
           <div
-            class="flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12"
+            class="flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition-transform hover:scale-105 hover:shadow-lg"
           >
             <div class="flex flex-col items-start gap-8">
               <img src="./assets/stars.svg" alt="" class="" />
@@ -170,9 +186,13 @@
             </div>
             <a
               href="#"
-              class="flex w-fit items-center gap-2.5 border-b border-green pt-16 text-green"
+              class="group relative mt-16 flex w-fit items-center gap-2.5 text-green after:absolute after:-bottom-1 after:h-px after:w-full after:bg-green after:transition-all after:duration-500 hover:after:w-[110%]"
               >Zobacz nasze realizacje
-              <img src="./assets/arrow-thin.svg" alt="" class="h-4 w-4" />
+              <img
+                src="./assets/arrow-thin.svg"
+                alt=""
+                class="h-4 w-4 transition-transform group-hover:translate-x-4"
+              />
             </a>
           </div>
         </div>
@@ -215,7 +235,7 @@
             </div>
             <a
               href="#"
-              class="flex w-fit items-center gap-2 rounded-full border border-gray px-6 py-3"
+              class="flex w-fit items-center gap-2 rounded-full border border-gray px-6 py-3 transition-all hover:shadow hover:shadow-gray hover:brightness-110 active:shadow-inner active:shadow-black active:brightness-90"
             >
               Poznaj nas bliżej
               <img src="./assets/arrow-thin-gray.svg" alt="" class="h-4 w-4" />
@@ -234,7 +254,7 @@
         ></div>
         <button
           id="expand-images-btn"
-          class="absolute bottom-[45.5px] left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 rounded-full border border-black px-6 py-3"
+          class="absolute bottom-[45.5px] left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 rounded-full border border-black px-6 py-3 backdrop-blur transition-all hover:shadow hover:shadow-black hover:brightness-110 active:shadow-inner active:shadow-black active:brightness-90"
         >
           Rozwiń <img src="./assets/arrow-down-black.svg" alt="" />
         </button>
@@ -277,7 +297,9 @@
           </p>
           <div class="my-auto flex flex-col items-start gap-6 md:w-1/6">
             <p>Śledź nasze najnowsze realizacje!</p>
-            <button class="rounded-full bg-gray px-6 py-3 text-green">
+            <button
+              class="rounded-full bg-gray px-6 py-3 text-green transition-all hover:shadow hover:shadow-gray hover:brightness-110 active:shadow-inner active:shadow-black active:brightness-90"
+            >
               Instagram
             </button>
           </div>
@@ -298,7 +320,9 @@
             class="flex flex-wrap items-center gap-4 text-sm lg:ml-auto lg:gap-6 xl:text-base"
           >
             <p>Daj znać, co możemy dla Ciebie zrobić!</p>
-            <button class="rounded-full bg-green px-6 py-3 text-gray">
+            <button
+              class="rounded-full bg-green px-6 py-3 text-gray transition-all hover:shadow hover:shadow-green hover:brightness-110 active:shadow-inner active:shadow-black active:brightness-90"
+            >
               Skontaktuj się z nami
             </button>
           </div>
