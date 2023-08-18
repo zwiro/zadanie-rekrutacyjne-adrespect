@@ -134,6 +134,118 @@ function nextHero() {
   }
 }
 
-setInterval(nextHero, 5000);
-nextHeroBtn.addEventListener("click", nextHero);
-prevHeroBtn.addEventListener("click", prevHero);
+let autoSlide = setInterval(nextHero, 5000);
+nextHeroBtn.addEventListener("click", () => {
+  clearInterval(autoSlide);
+  nextHero();
+  autoSlide = setInterval(nextHero, 5000);
+});
+prevHeroBtn.addEventListener("click", () => {
+  clearInterval(autoSlide);
+  prevHero();
+  autoSlide = setInterval(nextHero, 5000);
+});
+
+// popup image gallery
+
+const images = document.querySelectorAll(".masonry-grid-item");
+const popupGallery = document.querySelector("#popup-gallery");
+const popupImage = document.querySelector("#popup-image");
+const popupGalleryThumbnails = document.querySelectorAll(".popup-thumbnail");
+
+// // open popup gallery
+
+function openPopupGallery(image) {
+  popupGallery.classList.toggle("invisible");
+  popupGallery.classList.replace("opacity-0", "opacity-100");
+
+  popupImage.src = image.target.src;
+  popupGalleryThumbnails.forEach((thumbnail) => {
+    if (thumbnail.src === image.target.src) {
+      thumbnail.classList.add("ring");
+    } else thumbnail.classList.remove("ring");
+  });
+  popupGallery.animate([{ opacity: "0" }, { opacity: "1" }], { duration: 300 });
+}
+
+images.forEach((image) => image.addEventListener("click", openPopupGallery));
+
+// // close popup gallery
+
+const closePopupGalleryBtn = document.querySelector("#popup-close-btn");
+
+function closePopupGallery() {
+  popupGallery.classList.replace("opacity-100", "opacity-0");
+  setTimeout(() => {
+    popupGallery.classList.add("invisible");
+  }, 300);
+}
+
+closePopupGalleryBtn.addEventListener("click", closePopupGallery);
+
+window.addEventListener("click", (e) => {
+  if (e.target !== popupImage && e.target.contains(popupImage))
+    closePopupGallery();
+});
+
+// // change popup image
+
+const popupPrevBtn = document.querySelector("#popup-prev-btn");
+const popupNextBtn = document.querySelector("#popup-next-btn");
+
+function changePopupImage(direction) {
+  const currentImage = popupImage.src;
+  let currentImageIndex = 0;
+  popupGalleryThumbnails.forEach((thumbnail, index) => {
+    if (thumbnail.src === currentImage) currentImageIndex = index;
+  });
+  if (direction === "prev") {
+    if (currentImageIndex === 0) {
+      popupImage.src =
+        popupGalleryThumbnails[popupGalleryThumbnails.length - 1].src;
+      popupGalleryThumbnails[popupGalleryThumbnails.length - 1].classList.add(
+        "ring",
+      );
+      popupGalleryThumbnails[currentImageIndex].classList.remove("ring");
+    } else {
+      popupImage.src = popupGalleryThumbnails[currentImageIndex - 1].src;
+      popupGalleryThumbnails[currentImageIndex - 1].classList.add("ring");
+      popupGalleryThumbnails[currentImageIndex].classList.remove("ring");
+    }
+  } else {
+    if (currentImageIndex === popupGalleryThumbnails.length - 1) {
+      popupImage.src = popupGalleryThumbnails[0].src;
+      popupGalleryThumbnails[0].classList.add("ring");
+      popupGalleryThumbnails[currentImageIndex].classList.remove("ring");
+    } else {
+      popupImage.src = popupGalleryThumbnails[currentImageIndex + 1].src;
+      popupGalleryThumbnails[currentImageIndex + 1].classList.add("ring");
+      popupGalleryThumbnails[currentImageIndex].classList.remove("ring");
+    }
+  }
+
+  popupImage.animate([{ opacity: "0" }, { opacity: "1" }], {
+    duration: 500,
+  });
+}
+
+popupPrevBtn.addEventListener("click", () => changePopupImage("prev"));
+popupNextBtn.addEventListener("click", () => changePopupImage("next"));
+
+// // change image by thumbnail
+
+function changeImageByThumbnail(thumbnail) {
+  popupImage.src = thumbnail.target.src;
+  popupGalleryThumbnails.forEach((thumbnail) => {
+    if (thumbnail.src === popupImage.src) {
+      thumbnail.classList.add("ring");
+    } else thumbnail.classList.remove("ring");
+  });
+  popupImage.animate([{ opacity: "0" }, { opacity: "1" }], {
+    duration: 500,
+  });
+}
+
+popupGalleryThumbnails.forEach((thumbnail) => {
+  thumbnail.addEventListener("click", changeImageByThumbnail);
+});

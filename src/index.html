@@ -9,7 +9,7 @@
     <title>GiardDesign | Nowoczesne ogrody</title>
   </head>
 
-  <body class="bg-gray font-inter text-black">
+  <body class="relative bg-gray font-inter text-black">
     <header>
       <nav class="flex items-center bg-white px-8 py-6 sm:px-16 lg:px-[89px]">
         <h1>
@@ -370,7 +370,7 @@
       >
         <div
           id="images-overlay"
-          class="absolute inset-0 z-10 w-full bg-gradient-to-b from-beige/0 to-beige/100 transition-opacity"
+          class="pointer-events-none absolute inset-0 z-10 w-full bg-gradient-to-b from-beige/0 to-beige/100 transition-opacity"
         ></div>
         <button
           id="expand-images-btn"
@@ -387,22 +387,86 @@
           </p>
         </div>
         <div class="masonry-grid">
-          <img src="./assets/garden-1.jpg" alt="" class="masonry-grid-item" />
-          <img src="./assets/garden-2.jpg" alt="" class="masonry-grid-item" />
-          <img src="./assets/garden-3.jpg" alt="" class="masonry-grid-item" />
-          <img src="./assets/garden-4.jpg" alt="" class="masonry-grid-item" />
-          <img src="./assets/garden-5.jpg" alt="" class="masonry-grid-item" />
-          <img src="./assets/garden-6.jpg" alt="" class="masonry-grid-item" />
-          <img src="./assets/garden-7.jpg" alt="" class="masonry-grid-item" />
-          <img src="./assets/garden-8.jpg" alt="" class="masonry-grid-item" />
-          <img src="./assets/garden-9.jpg" alt="" class="masonry-grid-item" />
-          <img src="./assets/garden-11.jpg" alt="" class="masonry-grid-item" />
-          <img src="./assets/garden-12.jpg" alt="" class="masonry-grid-item" />
-          <img src="./assets/garden-13.jpg" alt="" class="masonry-grid-item" />
-          <img src="./assets/garden-14.jpg" alt="" class="masonry-grid-item" />
-          <img src="./assets/garden-15.jpg" alt="" class="masonry-grid-item" />
-          <img src="./assets/garden-16.jpg" alt="" class="masonry-grid-item" />
-          <img src="./assets/garden-17.jpg" alt="" class="masonry-grid-item" />
+          <img
+            src="./assets/garden-1.jpg"
+            alt=""
+            class="masonry-grid-item cursor-pointer"
+          />
+          <img
+            src="./assets/garden-2.jpg"
+            alt=""
+            class="masonry-grid-item cursor-pointer"
+          />
+          <img
+            src="./assets/garden-3.jpg"
+            alt=""
+            class="masonry-grid-item cursor-pointer"
+          />
+          <img
+            src="./assets/garden-4.jpg"
+            alt=""
+            class="masonry-grid-item cursor-pointer"
+          />
+          <img
+            src="./assets/garden-5.jpg"
+            alt=""
+            class="masonry-grid-item cursor-pointer"
+          />
+          <img
+            src="./assets/garden-6.jpg"
+            alt=""
+            class="masonry-grid-item cursor-pointer"
+          />
+          <img
+            src="./assets/garden-7.jpg"
+            alt=""
+            class="masonry-grid-item cursor-pointer"
+          />
+          <img
+            src="./assets/garden-8.jpg"
+            alt=""
+            class="masonry-grid-item cursor-pointer"
+          />
+          <img
+            src="./assets/garden-9.jpg"
+            alt=""
+            class="masonry-grid-item cursor-pointer"
+          />
+          <img
+            src="./assets/garden-11.jpg"
+            alt=""
+            class="masonry-grid-item cursor-pointer"
+          />
+          <img
+            src="./assets/garden-12.jpg"
+            alt=""
+            class="masonry-grid-item cursor-pointer"
+          />
+          <img
+            src="./assets/garden-13.jpg"
+            alt=""
+            class="masonry-grid-item cursor-pointer"
+          />
+          <img
+            src="./assets/garden-14.jpg"
+            alt=""
+            class="masonry-grid-item cursor-pointer"
+          />
+          <img
+            src="./assets/garden-15.jpg"
+            alt=""
+            class="masonry-grid-item cursor-pointer"
+          />
+          <img
+            src="./assets/garden-16.jpg"
+            alt=""
+            class="masonry-grid-item cursor-pointer"
+          />
+          <img
+            src="./assets/garden-17.jpg"
+            alt=""
+            class="masonry-grid-item cursor-pointer"
+          />
         </div>
       </section>
 
@@ -468,6 +532,129 @@
         </p>
       </div>
     </footer>
+
+    <div
+      id="popup-gallery"
+      class="invisible fixed inset-0 z-50 grid place-items-center bg-black/50 opacity-0 backdrop-blur transition-opacity"
+    >
+      <div class="relative">
+        <img
+          id="popup-image"
+          src="./assets/garden-1.jpg"
+          alt=""
+          class="h-full max-h-[90vh] w-full"
+        />
+        <div
+          class="absolute bottom-8 z-10 flex w-full justify-between gap-4 px-12"
+        >
+          <button
+            id="popup-prev-btn"
+            class="rounded-full bg-gray/50 px-2 py-2.5"
+          >
+            <img src="./assets/arrow.svg" alt="" class="rotate-180" />
+          </button>
+          <button
+            id="popup-next-btn"
+            class="rounded-full bg-gray/50 px-2 py-2.5"
+          >
+            <img src="./assets/arrow.svg" alt="" />
+          </button>
+        </div>
+        <button
+          id="popup-close-btn"
+          class="absolute right-4 top-4 rounded-full bg-gray/50 p-5"
+        >
+          <div
+            class="absolute inset-0 m-auto h-1 w-8 origin-center rotate-45 bg-black"
+          ></div>
+          <div
+            class="absolute inset-0 m-auto h-1 w-8 origin-center -rotate-45 bg-black"
+          ></div>
+        </button>
+      </div>
+      <div class="mx-auto hidden gap-1 sm:flex">
+        <img
+          src="./assets/garden-1.jpg"
+          alt=""
+          class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
+        />
+        <img
+          src="./assets/garden-2.jpg"
+          alt=""
+          class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
+        />
+        <img
+          src="./assets/garden-3.jpg"
+          alt=""
+          class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
+        />
+        <img
+          src="./assets/garden-4.jpg"
+          alt=""
+          class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
+        />
+        <img
+          src="./assets/garden-5.jpg"
+          alt=""
+          class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
+        />
+        <img
+          src="./assets/garden-6.jpg"
+          alt=""
+          class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
+        />
+        <img
+          src="./assets/garden-7.jpg"
+          alt=""
+          class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
+        />
+        <img
+          src="./assets/garden-8.jpg"
+          alt=""
+          class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
+        />
+        <img
+          src="./assets/garden-9.jpg"
+          alt=""
+          class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
+        />
+        <img
+          src="./assets/garden-11.jpg"
+          alt=""
+          class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
+        />
+        <img
+          src="./assets/garden-12.jpg"
+          alt=""
+          class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
+        />
+        <img
+          src="./assets/garden-13.jpg"
+          alt=""
+          class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
+        />
+        <img
+          src="./assets/garden-14.jpg"
+          alt=""
+          class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
+        />
+        <img
+          src="./assets/garden-15.jpg"
+          alt=""
+          class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
+        />
+        <img
+          src="./assets/garden-16.jpg"
+          alt=""
+          class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
+        />
+        <img
+          src="./assets/garden-17.jpg"
+          alt=""
+          class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
+        />
+      </div>
+    </div>
 
     <script
       defer
