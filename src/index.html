@@ -11,9 +11,7 @@
 
   <body class="bg-gray font-inter text-black">
     <header>
-      <nav
-        class="flex items-center overflow-hidden bg-white px-8 py-6 sm:px-16 lg:px-[89px]"
-      >
+      <nav class="flex items-center bg-white px-8 py-6 sm:px-16 lg:px-[89px]">
         <h1>
           <img src="./assets/giarddesign.svg" alt="GiardDesign" />
         </h1>
@@ -26,13 +24,18 @@
           id="menu"
           class="invisible fixed bottom-0 right-0 top-0 z-20 ml-auto flex translate-x-full flex-col items-start gap-12 bg-white px-8 py-4 pt-[68px] shadow-xl transition-transform sm:visible sm:static sm:translate-x-0 sm:flex-row sm:items-center sm:gap-4 sm:bg-transparent sm:p-0 sm:shadow-none md:gap-12"
         >
-          <li>
-            <a>
-              Oferta
-              <button aria-label="Rozwiń ofertę">
-                <img src="./assets/chevron.svg" alt="" />
-              </button>
-            </a>
+          <li class="group relative">
+            Oferta
+            <button aria-label="Rozwiń ofertę">
+              <img src="./assets/chevron.svg" alt="" />
+            </button>
+            <ul
+              class="invisible absolute left-0 top-5 flex flex-col gap-4 bg-white p-4 opacity-0 shadow-xl transition-opacity group-hover:visible group-hover:opacity-100"
+            >
+              <li><a href="#oferta">Projekty</a></li>
+              <li><a href="#oferta">Wizualizacje</a></li>
+              <li><a href="#oferta">Realizacje</a></li>
+            </ul>
           </li>
           <li><a href="#o-firmie">O firmie</a></li>
           <li><a href="#realizacje">Realizacje</a></li>
