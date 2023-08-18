@@ -32,7 +32,7 @@ expandImagesBtn.addEventListener("click", expandImagesSection);
 const burgerMenuBtn = document.querySelector("#burger-menu-btn");
 
 function toggleBurgerMenu() {
-  if (window.innerWidth > 640) return;
+  if (window.innerWidth > 768) return;
   const menu = document.querySelector("#menu");
   if (menu.classList.contains("invisible")) {
     menu.classList.add("translate-x-0");
@@ -58,3 +58,20 @@ function toggleBurgerMenu() {
 }
 
 burgerMenuBtn.addEventListener("click", toggleBurgerMenu);
+
+// open searchbar
+
+const openSearchbarBtn = document.querySelector("#open-searchbar-btn");
+
+function openSearchbar() {
+  const searchbar = document.querySelector("#searchbar");
+  toggleMultipleClasses(
+    searchbar,
+    "md:invisible",
+    "md:w-0",
+    "lg:w-48",
+    "md:w-32",
+  );
+}
+
+openSearchbarBtn.addEventListener("click", openSearchbar);

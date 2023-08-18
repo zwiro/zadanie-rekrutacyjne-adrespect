@@ -18,11 +18,11 @@
         <button
           id="burger-menu-btn"
           aria-label="Otwórz menu mobilne"
-          class="fixed right-8 top-8 z-30 ml-auto h-1 w-8 bg-black transition-all before:absolute before:-top-2 before:left-0 before:h-1 before:w-8 before:bg-black before:transition-all after:absolute after:left-0 after:top-2 after:h-1 after:w-8 after:bg-black after:transition-all sm:hidden xl:w-8 before:xl:-top-3 before:xl:w-8 after:xl:top-3 after:xl:w-8"
+          class="fixed right-8 top-8 z-30 ml-auto h-1 w-8 bg-black transition-all before:absolute before:-top-2 before:left-0 before:h-1 before:w-8 before:bg-black before:transition-all after:absolute after:left-0 after:top-2 after:h-1 after:w-8 after:bg-black after:transition-all md:hidden xl:w-8 before:xl:-top-3 before:xl:w-8 after:xl:top-3 after:xl:w-8"
         ></button>
         <ul
           id="menu"
-          class="invisible fixed bottom-0 right-0 top-0 z-20 ml-auto flex translate-x-full flex-col items-start gap-12 bg-white px-8 py-4 pt-[68px] shadow-xl transition-transform sm:visible sm:static sm:translate-x-0 sm:flex-row sm:items-center sm:gap-4 sm:bg-transparent sm:p-0 sm:shadow-none md:gap-12"
+          class="invisible fixed bottom-0 right-0 top-0 z-20 ml-auto flex translate-x-full flex-col items-start gap-12 bg-white px-8 py-4 pt-[68px] shadow-xl transition-transform md:visible md:static md:translate-x-0 md:flex-row md:items-center md:gap-4 md:bg-transparent md:p-0 md:shadow-none lg:gap-12"
         >
           <li class="group relative">
             Oferta
@@ -30,7 +30,7 @@
               <img src="./assets/chevron.svg" alt="" />
             </button>
             <ul
-              class="invisible absolute left-0 top-5 flex flex-col gap-4 bg-white p-4 opacity-0 shadow-xl transition-opacity group-hover:visible group-hover:opacity-100"
+              class="left-0 top-5 flex flex-col gap-4 bg-white p-4 transition-opacity md:invisible md:absolute md:opacity-0 md:shadow-xl md:group-hover:visible md:group-hover:opacity-100"
             >
               <li><a href="#oferta">Projekty</a></li>
               <li><a href="#oferta">Wizualizacje</a></li>
@@ -40,10 +40,16 @@
           <li><a href="#o-firmie">O firmie</a></li>
           <li><a href="#realizacje">Realizacje</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
-          <li>
-            <button aria-label="Otwórz wyszukiwarkę">
+          <li class="flex items-center">
+            <button id="open-searchbar-btn" aria-label="Otwórz wyszukiwarkę">
               <img src="./assets/glass.svg" alt="Ikona lupy" />
             </button>
+            <input
+              id="searchbar"
+              placeholder="Wyszukaj..."
+              type="search"
+              class="w-32 rounded-full bg-gray px-2 transition-all md:invisible md:w-0"
+            />
           </li>
         </ul>
       </nav>
