@@ -4,6 +4,12 @@ function toggleMultipleClasses(element, ...classes) {
   });
 }
 
+function toggleMultipleElements(className, ...elements) {
+  elements.forEach((element) => {
+    element.classList.toggle(className);
+  });
+}
+
 // expand images
 
 const expandImagesBtn = document.querySelector("#expand-images-btn");
@@ -75,3 +81,59 @@ function openSearchbar() {
 }
 
 openSearchbarBtn.addEventListener("click", openSearchbar);
+
+// hero slider
+
+const nextHeroBtn = document.querySelector("#hero-next-btn");
+const prevHeroBtn = document.querySelector("#hero-prev-btn");
+const heroSection1 = document.querySelector("#hero-section-1");
+const heroSection2 = document.querySelector("#hero-section-2");
+const heroSection3 = document.querySelector("#hero-section-3");
+
+function prevHero() {
+  if (heroSection1.classList.contains("translate-x-0")) {
+    heroSection1.classList.replace("translate-x-0", "translate-x-full");
+    heroSection1.classList.add("invisible");
+    heroSection2.classList.replace("-translate-x-full", "translate-x-0");
+    heroSection2.classList.remove("invisible");
+    heroSection3.classList.replace("translate-x-full", "-translate-x-full");
+  } else if (heroSection2.classList.contains("translate-x-0")) {
+    heroSection2.classList.replace("translate-x-0", "translate-x-full");
+    heroSection2.classList.add("invisible");
+    heroSection3.classList.replace("-translate-x-full", "translate-x-0");
+    heroSection3.classList.remove("invisible");
+    heroSection1.classList.replace("translate-x-full", "-translate-x-full");
+  } else {
+    heroSection3.classList.replace("translate-x-0", "translate-x-full");
+    heroSection3.classList.add("invisible");
+    heroSection1.classList.replace("-translate-x-full", "translate-x-0");
+    heroSection1.classList.remove("invisible");
+    heroSection2.classList.replace("translate-x-full", "-translate-x-full");
+  }
+}
+
+function nextHero() {
+  if (heroSection1.classList.contains("translate-x-0")) {
+    heroSection1.classList.replace("translate-x-0", "-translate-x-full");
+    heroSection1.classList.add("invisible");
+    heroSection2.classList.replace("-translate-x-full", "translate-x-full");
+    heroSection3.classList.replace("translate-x-full", "translate-x-0");
+    heroSection3.classList.remove("invisible");
+  } else if (heroSection2.classList.contains("translate-x-0")) {
+    heroSection2.classList.replace("translate-x-0", "-translate-x-full");
+    heroSection2.classList.add("invisible");
+    heroSection3.classList.replace("-translate-x-full", "translate-x-full");
+    heroSection1.classList.replace("translate-x-full", "translate-x-0");
+    heroSection1.classList.remove("invisible");
+  } else {
+    heroSection3.classList.replace("translate-x-0", "-translate-x-full");
+    heroSection3.classList.add("invisible");
+    heroSection1.classList.replace("-translate-x-full", "translate-x-full");
+    heroSection2.classList.replace("translate-x-full", "translate-x-0");
+    heroSection2.classList.remove("invisible");
+  }
+}
+
+setInterval(nextHero, 5000);
+nextHeroBtn.addEventListener("click", nextHero);
+prevHeroBtn.addEventListener("click", prevHero);

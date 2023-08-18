@@ -53,62 +53,163 @@
           </li>
         </ul>
       </nav>
-      <div
-        class="flex h-screen min-h-[650px] flex-col gap-4 bg-beige sm:flex-row lg:gap-16"
-      >
+      <div class="relative h-screen min-h-[650px] overflow-hidden bg-beige">
         <div
-          class="my-auto flex h-5/6 flex-col justify-center gap-8 px-8 sm:h-auto sm:w-3/4 sm:gap-[72px] sm:px-16 sm:pl-16 lg:pl-[89px] xl:w-1/2"
+          id="hero-section-1"
+          class="absolute inset-0 flex h-full translate-x-0 flex-col gap-4 transition-transform sm:flex-row lg:gap-16"
         >
-          <div class="flex flex-col gap-5 sm:gap-11">
-            <p
-              class="font-montserrat text-2xl font-medium sm:text-4xl xl:text-6xl"
-            >
-              Nowoczesna aranżacja Twojego&nbsp;ogrodu
-            </p>
-            <p class="w-5/6">
-              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
-              realizacji. Oferujemy kompleksowy zakres usług
-              z&nbsp;indywidualnym podejściem do każdego projektu.
-            </p>
+          <div
+            class="my-auto flex h-5/6 flex-col justify-center gap-8 px-8 sm:h-auto sm:w-3/4 sm:gap-[72px] sm:px-16 sm:pl-16 lg:pl-[89px] xl:w-1/2"
+          >
+            <div class="flex flex-col gap-5 sm:gap-11">
+              <p
+                class="font-montserrat text-2xl font-medium sm:text-4xl xl:text-6xl"
+              >
+                Nowoczesna aranżacja Twojego&nbsp;ogrodu
+              </p>
+              <p class="w-5/6">
+                Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+                realizacji. Oferujemy kompleksowy zakres usług
+                z&nbsp;indywidualnym podejściem do każdego projektu.
+              </p>
+            </div>
+            <div class="flex w-fit flex-wrap gap-4 sm:gap-9">
+              <a
+                href="#"
+                class="cursor-pointer rounded-full bg-green px-6 py-3 text-gray transition-all hover:shadow hover:shadow-green hover:brightness-110 active:shadow-inner active:shadow-black active:brightness-90"
+              >
+                Skontaktuj się z nami
+              </a>
+              <a
+                href="#"
+                class="group flex cursor-pointer items-center gap-2 rounded-full border border-green px-6 py-3 text-green transition-all hover:shadow hover:shadow-green hover:brightness-110 active:shadow-inner active:shadow-black active:brightness-90"
+              >
+                Zobacz nasze realizacje
+                <img
+                  src="./assets/arrow-down.svg"
+                  alt=""
+                  class="h-4 w-4 group-focus-within:animate-bounce group-hover:animate-bounce"
+                />
+              </a>
+            </div>
           </div>
-          <div class="flex w-fit flex-wrap gap-4 sm:gap-9">
-            <a
-              href="#"
-              class="cursor-pointer rounded-full bg-green px-6 py-3 text-gray transition-all hover:shadow hover:shadow-green hover:brightness-110 active:shadow-inner active:shadow-black active:brightness-90"
-            >
-              Skontaktuj się z nami
-            </a>
-            <a
-              href="#"
-              class="group flex cursor-pointer items-center gap-2 rounded-full border border-green px-6 py-3 text-green transition-all hover:shadow hover:shadow-green hover:brightness-110 active:shadow-inner active:shadow-black active:brightness-90"
-            >
-              Zobacz nasze realizacje
-              <img
-                src="./assets/arrow-down.svg"
-                alt=""
-                class="h-4 w-4 group-focus-within:animate-bounce group-hover:animate-bounce"
-              />
-            </a>
+          <div class="h-1/6 overflow-hidden sm:h-auto sm:w-1/4 xl:w-1/2">
+            <img
+              id="hero-visible"
+              src="./assets/hero-1.jpg"
+              alt="Rośliny w ogrodzie w widoku z góry"
+              class="h-full w-full object-cover"
+            />
           </div>
         </div>
-        <div class="relative h-1/6 sm:h-auto sm:w-1/4 xl:w-1/2">
-          <img
-            src="./assets/hero-1.jpg"
-            alt="Rośliny w ogrodzie w widoku z góry"
-            class="h-full w-full object-cover"
-          />
-          <div class="absolute bottom-0 right-0 flex gap-8 bg-gray px-8 py-6">
-            <button aria-label="Poprzedni slajd">
-              <img
-                src="./assets/arrow.svg"
-                alt="Strzałka w lewo"
-                class="rotate-180"
-              />
-            </button>
-            <button aria-label="Następny slajd">
-              <img src="./assets/arrow.svg" alt="Strzałka w prawo" />
-            </button>
+        <div
+          id="hero-section-2"
+          class="invisible absolute inset-0 flex h-full -translate-x-full flex-col gap-4 transition-transform sm:flex-row lg:gap-16"
+        >
+          <div
+            class="my-auto flex h-5/6 flex-col justify-center gap-8 px-8 sm:h-auto sm:w-3/4 sm:gap-[72px] sm:px-16 sm:pl-16 lg:pl-[89px] xl:w-1/2"
+          >
+            <div class="flex flex-col gap-5 sm:gap-11">
+              <p
+                class="font-montserrat text-2xl font-medium sm:text-4xl xl:text-6xl"
+              >
+                Przestrzeń pełna inspiracji
+              </p>
+              <p class="w-5/6">
+                GiardDesign to nie tylko firma, to prawdziwa filozofia
+                tworzenia. Nasz zespół pasjonatów kieruje się wizją
+                nieograniczonej kreatywności w przekształcaniu ogrodów.
+              </p>
+            </div>
+            <div class="flex w-fit flex-wrap gap-4 sm:gap-9">
+              <a
+                href="#"
+                class="cursor-pointer rounded-full bg-green px-6 py-3 text-gray transition-all hover:shadow hover:shadow-green hover:brightness-110 active:shadow-inner active:shadow-black active:brightness-90"
+              >
+                Skontaktuj się z nami
+              </a>
+              <a
+                href="#"
+                class="group flex cursor-pointer items-center gap-2 rounded-full border border-green px-6 py-3 text-green transition-all hover:shadow hover:shadow-green hover:brightness-110 active:shadow-inner active:shadow-black active:brightness-90"
+              >
+                Zobacz nasze realizacje
+                <img
+                  src="./assets/arrow-down.svg"
+                  alt=""
+                  class="h-4 w-4 group-focus-within:animate-bounce group-hover:animate-bounce"
+                />
+              </a>
+            </div>
           </div>
+          <div class="h-1/6 overflow-hidden sm:h-auto sm:w-1/4 xl:w-1/2">
+            <img
+              id="hero-visible"
+              src="./assets/hero-2.jpg"
+              alt="Rośliny w ogrodzie w widoku z góry"
+              class="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+        <div
+          id="hero-section-3"
+          class="invisible absolute inset-0 flex h-full translate-x-full flex-col gap-4 transition-transform sm:flex-row lg:gap-16"
+        >
+          <div
+            class="my-auto flex h-5/6 flex-col justify-center gap-8 px-8 sm:h-auto sm:w-3/4 sm:gap-[72px] sm:px-16 sm:pl-16 lg:pl-[89px] xl:w-1/2"
+          >
+            <div class="flex flex-col gap-5 sm:gap-11">
+              <p
+                class="font-montserrat text-2xl font-medium sm:text-4xl xl:text-6xl"
+              >
+                Odkryj nowe wymiary designu
+              </p>
+              <p class="w-5/6">
+                GiardDesign to manifestacja artystycznego podejścia do
+                przestrzeni zewnętrznych. Nasza marka to opowieść o
+                przekraczaniu granic konwencji i otwieraniu się na nowe
+                możliwości.
+              </p>
+            </div>
+            <div class="flex w-fit flex-wrap gap-4 sm:gap-9">
+              <a
+                href="#"
+                class="cursor-pointer rounded-full bg-green px-6 py-3 text-gray transition-all hover:shadow hover:shadow-green hover:brightness-110 active:shadow-inner active:shadow-black active:brightness-90"
+              >
+                Skontaktuj się z nami
+              </a>
+              <a
+                href="#"
+                class="group flex cursor-pointer items-center gap-2 rounded-full border border-green px-6 py-3 text-green transition-all hover:shadow hover:shadow-green hover:brightness-110 active:shadow-inner active:shadow-black active:brightness-90"
+              >
+                Zobacz nasze realizacje
+                <img
+                  src="./assets/arrow-down.svg"
+                  alt=""
+                  class="h-4 w-4 group-focus-within:animate-bounce group-hover:animate-bounce"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="h-1/6 overflow-hidden sm:h-auto sm:w-1/4 xl:w-1/2">
+            <img
+              id="hero-visible"
+              src="./assets/hero-3.jpg"
+              alt="Rośliny w ogrodzie w widoku z góry"
+              class="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+        <div class="absolute bottom-0 right-0 flex gap-8 bg-gray px-8 py-6">
+          <button id="hero-prev-btn" aria-label="Poprzedni slajd">
+            <img
+              src="./assets/arrow.svg"
+              alt="Strzałka w lewo"
+              class="rotate-180"
+            />
+          </button>
+          <button id="hero-next-btn" aria-label="Następny slajd">
+            <img src="./assets/arrow.svg" alt="Strzałka w prawo" />
+          </button>
         </div>
       </div>
     </header>
