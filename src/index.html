@@ -11,11 +11,21 @@
 
   <body class="bg-gray font-inter text-black">
     <header>
-      <nav class="flex items-center bg-white px-8 py-6 sm:px-16 lg:px-[89px]">
+      <nav
+        class="flex items-center overflow-hidden bg-white px-8 py-6 sm:px-16 lg:px-[89px]"
+      >
         <h1>
           <img src="./assets/giarddesign.svg" alt="GiardDesign" />
         </h1>
-        <ul class="ml-auto hidden gap-4 sm:flex md:gap-12">
+        <button
+          id="burger-menu-btn"
+          aria-label="Otwórz menu mobilne"
+          class="fixed right-8 top-8 z-30 ml-auto h-1 w-8 bg-black transition-all before:absolute before:-top-2 before:left-0 before:h-1 before:w-8 before:bg-black before:transition-all after:absolute after:left-0 after:top-2 after:h-1 after:w-8 after:bg-black after:transition-all sm:hidden xl:w-8 before:xl:-top-3 before:xl:w-8 after:xl:top-3 after:xl:w-8"
+        ></button>
+        <ul
+          id="menu"
+          class="invisible fixed bottom-0 right-0 top-0 z-20 ml-auto flex translate-x-full flex-col items-start gap-12 bg-white px-8 py-4 pt-[68px] shadow-xl transition-transform sm:visible sm:static sm:translate-x-0 sm:flex-row sm:items-center sm:gap-4 sm:bg-transparent sm:p-0 sm:shadow-none md:gap-12"
+        >
           <li>
             <a>
               Oferta
