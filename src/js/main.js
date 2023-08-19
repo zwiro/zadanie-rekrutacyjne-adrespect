@@ -6,12 +6,6 @@ function toggleMultipleClasses(element, ...classes) {
   });
 }
 
-function toggleMultipleElements(className, ...elements) {
-  elements.forEach((element) => {
-    element.classList.toggle(className);
-  });
-}
-
 // expand images
 
 const expandImagesBtn = document.querySelector("#expand-images-btn");
@@ -42,15 +36,18 @@ collapseImagesBtn.addEventListener("click", () =>
 // burger mobile menu
 
 const burgerMenuBtn = document.querySelector("#burger-menu-btn");
+const menu = document.querySelector("#menu");
+let isMenuOpened = false;
 
 function toggleBurgerMenu() {
-  const menu = document.querySelector("#menu");
   if (window.innerWidth > 768) return;
   if (menu.classList.contains("opacity-0")) {
     menu.classList.remove("invisible");
     menu.classList.replace("opacity-0", "opacity-100");
+    isMenuOpened = true;
   } else {
     menu.classList.replace("opacity-100", "opacity-0");
+    isMenuOpened = false;
     setTimeout(() => {
       menu.classList.add("invisible");
     }, 300);
@@ -67,7 +64,14 @@ function toggleBurgerMenu() {
   );
 }
 
-burgerMenuBtn.addEventListener("click", toggleBurgerMenu);
+burgerMenuBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  toggleBurgerMenu();
+});
+window.addEventListener("click", (e) => {
+  if (isMenuOpened && e.target !== menu && !menu.contains(e.target))
+    toggleBurgerMenu();
+});
 
 // open searchbar
 
