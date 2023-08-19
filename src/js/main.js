@@ -1,3 +1,5 @@
+// utils
+
 function toggleMultipleClasses(element, ...classes) {
   classes.forEach((className) => {
     element.classList.toggle(className);
@@ -13,44 +15,48 @@ function toggleMultipleElements(className, ...elements) {
 // expand images
 
 const expandImagesBtn = document.querySelector("#expand-images-btn");
+const collapseImagesBtn = document.querySelector("#collapse-images-btn");
 
-function expandImagesSection() {
+function expandCollapseImagesSection(action) {
   const imagesContainer = document.querySelector("#realizacje");
   const imagesOverlay = document.querySelector("#images-overlay");
-  if (imagesContainer.classList.contains("max-h-[1000vh]")) {
-    expandImagesBtn.innerHTML =
-      'Rozwiń <img src="./assets/arrow-down-black.svg" alt="" />';
-    imagesContainer.classList.add("max-h-[200vh]");
-  } else {
-    expandImagesBtn.innerHTML =
-      'Zwiń <img src="./assets/arrow-down-black.svg" alt="" class="rotate-180" />';
-    imagesContainer.classList.remove("max-h-[200vh]");
+  if (action === "expand") {
+    expandImagesBtn.classList.replace("flex", "hidden");
+    collapseImagesBtn.classList.replace("hidden", "flex");
+    imagesContainer.classList.replace("max-h-[200vh]", "max-h-[1000vh]");
+  } else if (action === "collapse") {
+    expandImagesBtn.classList.replace("hidden", "flex");
+    collapseImagesBtn.classList.replace("flex", "hidden");
+    imagesContainer.classList.replace("max-h-[1000vh]", "max-h-[200vh]");
   }
-  expandImagesBtn.classList.toggle("bg-gray/50");
   imagesOverlay.classList.toggle("opacity-0");
-  imagesContainer.classList.toggle("max-h-[1000vh]");
 }
 
-expandImagesBtn.addEventListener("click", expandImagesSection);
+expandImagesBtn.addEventListener("click", () =>
+  expandCollapseImagesSection("expand"),
+);
+collapseImagesBtn.addEventListener("click", () =>
+  expandCollapseImagesSection("collapse"),
+);
 
-// burger menu
+// burger mobile menu
 
 const burgerMenuBtn = document.querySelector("#burger-menu-btn");
 
 function toggleBurgerMenu() {
-  if (window.innerWidth > 768) return;
   const menu = document.querySelector("#menu");
-  if (menu.classList.contains("invisible")) {
-    menu.classList.add("translate-x-0");
-    menu.classList.remove("translate-x-full");
-    menu.classList.toggle("invisible");
+  if (window.innerWidth > 768) return;
+  if (menu.classList.contains("opacity-0")) {
+    menu.classList.remove("invisible");
+    menu.classList.replace("opacity-0", "opacity-100");
   } else {
-    menu.classList.add("translate-x-full");
-    menu.classList.remove("translate-x-0");
+    menu.classList.replace("opacity-100", "opacity-0");
     setTimeout(() => {
-      menu.classList.toggle("invisible");
+      menu.classList.add("invisible");
     }, 300);
   }
+
+  toggleMultipleClasses(menu, "translate-x-0", "translate-x-full");
   toggleMultipleClasses(
     burgerMenuBtn,
     "rotate-45",
@@ -58,8 +64,6 @@ function toggleBurgerMenu() {
     "before:rotate-90",
     "after:-translate-y-2",
     "after:-rotate-90",
-    "before:xl:translate-y-3",
-    "after:xl:-translate-y-3",
   );
 }
 
@@ -71,6 +75,7 @@ const openSearchbarBtn = document.querySelector("#open-searchbar-btn");
 
 function openSearchbar() {
   const searchbar = document.querySelector("#searchbar");
+
   toggleMultipleClasses(
     searchbar,
     "md:invisible",
@@ -86,64 +91,58 @@ openSearchbarBtn.addEventListener("click", openSearchbar);
 
 const nextHeroBtn = document.querySelector("#hero-next-btn");
 const prevHeroBtn = document.querySelector("#hero-prev-btn");
-const heroSection1 = document.querySelector("#hero-section-1");
-const heroSection2 = document.querySelector("#hero-section-2");
-const heroSection3 = document.querySelector("#hero-section-3");
+const heroSections = document.querySelectorAll(".hero-section");
+let isSliding = false;
 
-function prevHero() {
-  if (heroSection1.classList.contains("translate-x-0")) {
-    heroSection1.classList.replace("translate-x-0", "translate-x-full");
-    heroSection1.classList.add("invisible");
-    heroSection2.classList.replace("-translate-x-full", "translate-x-0");
-    heroSection2.classList.remove("invisible");
-    heroSection3.classList.replace("translate-x-full", "-translate-x-full");
-  } else if (heroSection2.classList.contains("translate-x-0")) {
-    heroSection2.classList.replace("translate-x-0", "translate-x-full");
-    heroSection2.classList.add("invisible");
-    heroSection3.classList.replace("-translate-x-full", "translate-x-0");
-    heroSection3.classList.remove("invisible");
-    heroSection1.classList.replace("translate-x-full", "-translate-x-full");
+function changeHero(direction = "next") {
+  if (isSliding) return;
+  isSliding = true;
+  if (direction === "next") {
+    heroSections.forEach((section) => {
+      if (section.classList.contains("translate-x-0")) {
+        section.classList.replace("translate-x-0", "translate-x-full");
+        setTimeout(() => {
+          section.classList.toggle("invisible");
+        }, 1000);
+      } else if (section.classList.contains("-translate-x-full")) {
+        section.classList.replace("-translate-x-full", "translate-x-0");
+        section.classList.toggle("invisible");
+      } else if (section.classList.contains("translate-x-full")) {
+        section.classList.replace("translate-x-full", "-translate-x-full");
+      }
+    });
   } else {
-    heroSection3.classList.replace("translate-x-0", "translate-x-full");
-    heroSection3.classList.add("invisible");
-    heroSection1.classList.replace("-translate-x-full", "translate-x-0");
-    heroSection1.classList.remove("invisible");
-    heroSection2.classList.replace("translate-x-full", "-translate-x-full");
+    heroSections.forEach((section) => {
+      if (section.classList.contains("translate-x-0")) {
+        section.classList.replace("translate-x-0", "-translate-x-full");
+        setTimeout(() => {
+          section.classList.toggle("invisible");
+        }, 1000);
+      } else if (section.classList.contains("-translate-x-full")) {
+        section.classList.replace("-translate-x-full", "translate-x-full");
+      } else if (section.classList.contains("translate-x-full")) {
+        section.classList.replace("translate-x-full", "translate-x-0");
+        section.classList.toggle("invisible");
+      }
+    });
   }
+  setTimeout(() => {
+    isSliding = false;
+  }, 1000);
 }
 
-function nextHero() {
-  if (heroSection1.classList.contains("translate-x-0")) {
-    heroSection1.classList.replace("translate-x-0", "-translate-x-full");
-    heroSection1.classList.add("invisible");
-    heroSection2.classList.replace("-translate-x-full", "translate-x-full");
-    heroSection3.classList.replace("translate-x-full", "translate-x-0");
-    heroSection3.classList.remove("invisible");
-  } else if (heroSection2.classList.contains("translate-x-0")) {
-    heroSection2.classList.replace("translate-x-0", "-translate-x-full");
-    heroSection2.classList.add("invisible");
-    heroSection3.classList.replace("-translate-x-full", "translate-x-full");
-    heroSection1.classList.replace("translate-x-full", "translate-x-0");
-    heroSection1.classList.remove("invisible");
-  } else {
-    heroSection3.classList.replace("translate-x-0", "-translate-x-full");
-    heroSection3.classList.add("invisible");
-    heroSection1.classList.replace("-translate-x-full", "translate-x-full");
-    heroSection2.classList.replace("translate-x-full", "translate-x-0");
-    heroSection2.classList.remove("invisible");
-  }
-}
+let autoSlide = setInterval(changeHero, 5000);
 
-let autoSlide = setInterval(nextHero, 5000);
 nextHeroBtn.addEventListener("click", () => {
   clearInterval(autoSlide);
-  nextHero();
-  autoSlide = setInterval(nextHero, 5000);
+  changeHero();
+  autoSlide = setInterval(changeHero, 5000);
 });
+
 prevHeroBtn.addEventListener("click", () => {
   clearInterval(autoSlide);
-  prevHero();
-  autoSlide = setInterval(nextHero, 5000);
+  changeHero("prev");
+  autoSlide = setInterval(changeHero, 5000);
 });
 
 // popup image gallery
@@ -165,7 +164,6 @@ function openPopupGallery(image) {
       thumbnail.classList.add("ring");
     } else thumbnail.classList.remove("ring");
   });
-  popupGallery.animate([{ opacity: "0" }, { opacity: "1" }], { duration: 300 });
 }
 
 images.forEach((image) => image.addEventListener("click", openPopupGallery));
@@ -223,10 +221,6 @@ function changePopupImage(direction) {
       popupGalleryThumbnails[currentImageIndex].classList.remove("ring");
     }
   }
-
-  popupImage.animate([{ opacity: "0" }, { opacity: "1" }], {
-    duration: 500,
-  });
 }
 
 popupPrevBtn.addEventListener("click", () => changePopupImage("prev"));
@@ -240,9 +234,6 @@ function changeImageByThumbnail(thumbnail) {
     if (thumbnail.src === popupImage.src) {
       thumbnail.classList.add("ring");
     } else thumbnail.classList.remove("ring");
-  });
-  popupImage.animate([{ opacity: "0" }, { opacity: "1" }], {
-    duration: 500,
   });
 }
 
