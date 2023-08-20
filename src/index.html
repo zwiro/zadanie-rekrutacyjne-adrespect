@@ -30,20 +30,44 @@
           id="menu"
           class="invisible fixed bottom-0 right-0 top-0 z-20 ml-auto flex translate-x-full flex-col items-start gap-12 bg-white px-8 py-4 pt-[68px] opacity-0 shadow-xl transition md:visible md:static md:translate-x-0 md:flex-row md:items-center md:gap-4 md:bg-transparent md:p-0 md:opacity-100 md:shadow-none lg:gap-12"
         >
-          <li tabindex="0" class="group relative flex gap-1">
+          <li tabindex="0" class="group relative flex cursor-pointer gap-1">
             Oferta
             <img src="./assets/chevron.svg" alt="" />
             <ul
-              class="left-0 top-5 flex flex-col gap-4 bg-white p-4 transition-opacity md:invisible md:absolute md:opacity-0 md:shadow-xl md:group-focus-within:visible md:group-focus-within:opacity-100 md:group-hover:visible md:group-hover:opacity-100"
+              class="left-0 top-5 flex flex-col bg-white py-4 transition-opacity md:invisible md:absolute md:opacity-0 md:shadow-xl md:group-focus-within:visible md:group-focus-within:opacity-100 md:group-hover:visible md:group-hover:opacity-100"
             >
-              <li><a href="#oferta">Projekty</a></li>
-              <li><a href="#oferta">Wizualizacje</a></li>
-              <li><a href="#oferta">Realizacje</a></li>
+              <li class="px-4 py-2 focus-within:bg-gray hover:bg-gray">
+                <a href="#oferta">Projekty</a>
+              </li>
+              <li class="px-4 py-2 focus-within:bg-gray hover:bg-gray">
+                <a href="#oferta">Wizualizacje</a>
+              </li>
+              <li class="px-4 py-2 focus-within:bg-gray hover:bg-gray">
+                <a href="#oferta">Realizacje</a>
+              </li>
             </ul>
           </li>
-          <li><a href="#o-firmie">O firmie</a></li>
-          <li><a href="#realizacje">Realizacje</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
+          <li>
+            <a
+              href="#o-firmie"
+              class="relative after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:bg-green after:transition-transform after:hover:scale-x-100 after:focus-visible:scale-x-100"
+              >O firmie</a
+            >
+          </li>
+          <li>
+            <a
+              href="#realizacje"
+              class="relative after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:bg-green after:transition-transform after:hover:scale-x-100 after:focus-visible:scale-x-100"
+              >Realizacje</a
+            >
+          </li>
+          <li>
+            <a
+              href="#kontakt"
+              class="relative after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:bg-green after:transition-transform after:hover:scale-x-100 after:focus-visible:scale-x-100"
+              >Kontakt</a
+            >
+          </li>
           <li class="flex items-center">
             <button id="open-searchbar-btn" aria-label="Otwórz wyszukiwarkę">
               <img src="./assets/glass.svg" alt="Ikona lupy" />
