@@ -24,13 +24,11 @@
           id="menu"
           class="invisible fixed bottom-0 right-0 top-0 z-20 ml-auto flex translate-x-full flex-col items-start gap-12 bg-white px-8 py-4 pt-[68px] opacity-0 shadow-xl transition md:visible md:static md:translate-x-0 md:flex-row md:items-center md:gap-4 md:bg-transparent md:p-0 md:opacity-100 md:shadow-none lg:gap-12"
         >
-          <li class="group relative">
+          <li tabindex="0" class="group relative flex gap-1">
             Oferta
-            <button aria-label="Rozwiń ofertę">
-              <img src="./assets/chevron.svg" alt="" />
-            </button>
+            <img src="./assets/chevron.svg" alt="" />
             <ul
-              class="left-0 top-5 flex flex-col gap-4 bg-white p-4 transition-opacity md:invisible md:absolute md:opacity-0 md:shadow-xl md:group-hover:visible md:group-hover:opacity-100"
+              class="left-0 top-5 flex flex-col gap-4 bg-white p-4 transition-opacity md:invisible md:absolute md:opacity-0 md:shadow-xl md:group-focus-within:visible md:group-focus-within:opacity-100 md:group-hover:visible md:group-hover:opacity-100"
             >
               <li><a href="#oferta">Projekty</a></li>
               <li><a href="#oferta">Wizualizacje</a></li>
@@ -75,19 +73,19 @@
             <div class="flex w-fit flex-wrap gap-4 sm:gap-9">
               <a
                 href="#"
-                class="relative cursor-pointer overflow-hidden rounded-full bg-green px-6 py-3 text-gray ring-gray transition-all before:absolute before:-left-1/4 before:top-0 before:h-full before:w-1/12 before:skew-x-12 before:bg-gray/10 before:brightness-200 before:transition-transform before:duration-1000 hover:ring before:hover:translate-x-72"
+                class="relative cursor-pointer overflow-hidden rounded-full bg-green px-6 py-3 text-gray ring-gray transition-all before:absolute before:-left-1/4 before:top-0 before:h-full before:w-1/12 before:skew-x-12 before:bg-gray/10 before:brightness-200 before:transition-transform before:duration-1000 hover:ring before:hover:translate-x-72 focus:outline-none focus-visible:ring before:focus-visible:translate-x-72"
               >
                 Skontaktuj się z nami
               </a>
               <a
                 href="#"
-                class="group relative z-10 flex cursor-pointer items-center gap-2 overflow-hidden rounded-full border border-green px-6 py-3 text-green ring-gray transition-all before:absolute before:inset-0 before:-z-10 before:m-auto before:h-64 before:w-64 before:scale-0 before:rounded-full before:bg-green before:transition-transform before:duration-200 hover:text-gray hover:ring before:hover:scale-100 before:hover:duration-500"
+                class="group relative z-10 flex cursor-pointer items-center gap-2 overflow-hidden rounded-full border border-green px-6 py-3 text-green ring-gray transition-all before:absolute before:inset-0 before:-z-10 before:m-auto before:h-64 before:w-64 before:scale-0 before:rounded-full before:bg-green before:transition-transform before:duration-200 hover:text-gray hover:ring before:hover:scale-100 before:hover:duration-500 focus:outline-none focus-visible:text-gray focus-visible:ring before:focus-visible:scale-100 before:focus-visible:duration-500"
               >
                 Zobacz nasze realizacje
                 <img
                   src="./assets/arrow-down.svg"
                   alt=""
-                  class="h-4 w-4 group-focus-within:animate-bounce group-hover:animate-bounce"
+                  class="h-4 w-4 group-hover:grayscale group-hover:invert group-focus-visible:grayscale group-focus-visible:invert"
                 />
               </a>
             </div>
@@ -122,19 +120,19 @@
             <div class="flex w-fit flex-wrap gap-4 sm:gap-9">
               <a
                 href="#"
-                class="relative cursor-pointer overflow-hidden rounded-full bg-green px-6 py-3 text-gray ring-gray transition-all before:absolute before:-left-1/4 before:top-0 before:h-full before:w-1/12 before:skew-x-12 before:bg-gray/10 before:brightness-200 before:transition-transform before:duration-1000 hover:ring before:hover:translate-x-72"
+                class="relative cursor-pointer overflow-hidden rounded-full bg-green px-6 py-3 text-gray ring-gray transition-all before:absolute before:-left-1/4 before:top-0 before:h-full before:w-1/12 before:skew-x-12 before:bg-gray/10 before:brightness-200 before:transition-transform before:duration-1000 hover:ring before:hover:translate-x-72 focus:outline-none focus-visible:ring before:focus-visible:translate-x-72"
               >
                 Skontaktuj się z nami
               </a>
               <a
                 href="#"
-                class="group relative z-10 flex cursor-pointer items-center gap-2 overflow-hidden rounded-full border border-green px-6 py-3 text-green ring-gray transition-all before:absolute before:inset-0 before:-z-10 before:m-auto before:h-64 before:w-64 before:scale-0 before:rounded-full before:bg-green before:transition-transform before:duration-200 hover:text-gray hover:ring before:hover:scale-100 before:hover:duration-500"
+                class="group relative z-10 flex cursor-pointer items-center gap-2 overflow-hidden rounded-full border border-green px-6 py-3 text-green ring-gray transition-all before:absolute before:inset-0 before:-z-10 before:m-auto before:h-64 before:w-64 before:scale-0 before:rounded-full before:bg-green before:transition-transform before:duration-200 hover:text-gray hover:ring before:hover:scale-100 before:hover:duration-500 focus:outline-none focus-visible:text-gray focus-visible:ring before:focus-visible:scale-100 before:focus-visible:duration-500"
               >
                 Zobacz nasze realizacje
                 <img
                   src="./assets/arrow-down.svg"
                   alt=""
-                  class="h-4 w-4 group-focus-within:animate-bounce group-hover:animate-bounce"
+                  class="h-4 w-4 group-hover:grayscale group-hover:invert group-focus-visible:grayscale group-focus-visible:invert"
                 />
               </a>
             </div>
@@ -170,19 +168,19 @@
             <div class="flex w-fit flex-wrap gap-4 sm:gap-9">
               <a
                 href="#"
-                class="relative cursor-pointer overflow-hidden rounded-full bg-green px-6 py-3 text-gray ring-gray transition-all before:absolute before:-left-1/4 before:top-0 before:h-full before:w-1/12 before:skew-x-12 before:bg-gray/10 before:brightness-200 before:transition-transform before:duration-1000 hover:ring before:hover:translate-x-72"
+                class="relative cursor-pointer overflow-hidden rounded-full bg-green px-6 py-3 text-gray ring-gray transition-all before:absolute before:-left-1/4 before:top-0 before:h-full before:w-1/12 before:skew-x-12 before:bg-gray/10 before:brightness-200 before:transition-transform before:duration-1000 hover:ring before:hover:translate-x-72 focus:outline-none focus-visible:ring before:focus-visible:translate-x-72"
               >
                 Skontaktuj się z nami
               </a>
               <a
                 href="#"
-                class="group relative z-10 flex cursor-pointer items-center gap-2 overflow-hidden rounded-full border border-green px-6 py-3 text-green ring-gray transition-all before:absolute before:inset-0 before:-z-10 before:m-auto before:h-64 before:w-64 before:scale-0 before:rounded-full before:bg-green before:transition-transform before:duration-200 hover:text-gray hover:ring before:hover:scale-100 before:hover:duration-500"
+                class="group relative z-10 flex cursor-pointer items-center gap-2 overflow-hidden rounded-full border border-green px-6 py-3 text-green ring-gray transition-all before:absolute before:inset-0 before:-z-10 before:m-auto before:h-64 before:w-64 before:scale-0 before:rounded-full before:bg-green before:transition-transform before:duration-200 hover:text-gray hover:ring before:hover:scale-100 before:hover:duration-500 focus:outline-none focus-visible:text-gray focus-visible:ring before:focus-visible:scale-100 before:focus-visible:duration-500"
               >
                 Zobacz nasze realizacje
                 <img
                   src="./assets/arrow-down.svg"
                   alt=""
-                  class="h-4 w-4 group-focus-within:animate-bounce group-hover:animate-bounce"
+                  class="h-4 w-4 group-hover:grayscale group-hover:invert group-focus-visible:grayscale group-focus-visible:invert"
                 />
               </a>
             </div>
@@ -201,11 +199,15 @@
             <img
               src="./assets/arrow.svg"
               alt="Strzałka w lewo"
-              class="rotate-180"
+              class="rotate-180 transition-transform hover:-translate-x-1"
             />
           </button>
           <button id="hero-next-btn" aria-label="Następny slajd">
-            <img src="./assets/arrow.svg" alt="Strzałka w prawo" />
+            <img
+              src="./assets/arrow.svg"
+              alt="Strzałka w prawo"
+              class="transition-transform hover:translate-x-1"
+            />
           </button>
         </div>
       </div>
@@ -235,7 +237,7 @@
         </div>
         <div class="flex flex-col gap-8 sm:gap-16 lg:flex-row">
           <div
-            class="flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition-transform hover:scale-105 hover:shadow-lg"
+            class="flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition focus-within:scale-105 focus-within:shadow-lg hover:scale-105 hover:shadow-lg"
           >
             <div class="flex flex-col items-start gap-8">
               <img src="./assets/pencil.svg" alt="" />
@@ -250,7 +252,7 @@
               </div>
             </div>
             <a
-              href="#"
+              href="#oferta"
               class="group relative mt-16 flex w-fit items-center gap-2.5 text-green after:absolute after:-bottom-1 after:h-px after:w-full after:bg-green after:transition-all hover:after:w-[110%]"
               >Dowiedz się więcej
               <img
@@ -261,7 +263,7 @@
             </a>
           </div>
           <div
-            class="flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition-transform hover:scale-105 hover:shadow-lg"
+            class="flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition focus-within:scale-105 focus-within:shadow-lg hover:scale-105 hover:shadow-lg"
           >
             <div class="flex flex-col items-start gap-8">
               <img src="./assets/eye.svg" alt="" />
@@ -276,7 +278,7 @@
               </div>
             </div>
             <a
-              href="#"
+              href="#oferta"
               class="group relative mt-16 flex w-fit items-center gap-2.5 text-green after:absolute after:-bottom-1 after:h-px after:w-full after:bg-green after:transition-all hover:after:w-[110%]"
               >Dowiedz się więcej
               <img
@@ -287,7 +289,7 @@
             </a>
           </div>
           <div
-            class="flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition-transform hover:scale-105 hover:shadow-lg"
+            class="flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition focus-within:scale-105 focus-within:shadow-lg hover:scale-105 hover:shadow-lg"
           >
             <div class="flex flex-col items-start gap-8">
               <img src="./assets/stars.svg" alt="" />
@@ -302,7 +304,7 @@
               </div>
             </div>
             <a
-              href="#"
+              href="#oferta"
               class="group relative mt-16 flex w-fit items-center gap-2.5 text-green after:absolute after:-bottom-1 after:h-px after:w-full after:bg-green after:transition-all hover:after:w-[110%]"
               >Zobacz nasze realizacje
               <img
@@ -352,7 +354,7 @@
             </div>
             <a
               href="#"
-              class="relative z-10 flex w-fit items-center gap-2 overflow-hidden rounded-full border border-gray px-6 py-3 ring-gray transition-all before:absolute before:-left-1/4 before:top-0 before:h-full before:w-1/12 before:skew-x-12 before:bg-gray/10 before:brightness-200 before:transition-transform before:duration-1000 hover:border-transparent hover:ring before:hover:translate-x-72"
+              class="relative z-10 flex w-fit items-center gap-2 overflow-hidden rounded-full border border-gray px-6 py-3 ring-gray transition-all before:absolute before:-left-1/4 before:top-0 before:h-full before:w-1/12 before:skew-x-12 before:bg-gray/10 before:brightness-200 before:transition-transform before:duration-1000 hover:border-transparent hover:ring before:hover:translate-x-72 focus:outline-none focus-visible:border-transparent focus-visible:ring before:focus-visible:translate-x-72"
             >
               Poznaj nas bliżej
               <img src="./assets/arrow-thin-gray.svg" alt="" class="h-4 w-4" />
@@ -371,13 +373,13 @@
         ></div>
         <button
           id="expand-images-btn"
-          class="absolute bottom-[45.5px] left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 rounded-full border border-black px-6 py-3 backdrop-blur transition-all hover:shadow hover:shadow-black hover:brightness-110 active:shadow-inner active:shadow-black active:brightness-90"
+          class="absolute bottom-[45.5px] left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 rounded-full border border-black px-6 py-3 backdrop-blur transition-all hover:shadow hover:shadow-black hover:brightness-110 focus:outline-none focus-visible:shadow focus-visible:shadow-black focus-visible:brightness-110 active:shadow-inner active:shadow-black active:brightness-90"
         >
           Rozwiń <img src="./assets/arrow-down-black.svg" alt="" />
         </button>
         <button
           id="collapse-images-btn"
-          class="absolute bottom-[45.5px] left-1/2 z-10 hidden -translate-x-1/2 items-center gap-2 rounded-full border border-black bg-gray/50 px-6 py-3 backdrop-blur transition-all hover:shadow hover:shadow-black hover:brightness-110 active:shadow-inner active:shadow-black active:brightness-90"
+          class="absolute bottom-[45.5px] left-1/2 z-10 hidden -translate-x-1/2 items-center gap-2 rounded-full border border-black bg-gray/50 px-6 py-3 backdrop-blur transition hover:shadow hover:shadow-black hover:brightness-110 focus:outline-none focus-visible:shadow focus-visible:shadow-black focus-visible:brightness-110 active:shadow-inner active:shadow-black active:brightness-90"
         >
           Zwiń
           <img src="./assets/arrow-down-black.svg" alt="" class="rotate-180" />
@@ -486,7 +488,7 @@
           <div class="my-auto flex flex-col items-start gap-6 md:w-1/6">
             <p>Śledź nasze najnowsze realizacje!</p>
             <button
-              class="relative z-10 overflow-hidden rounded-full bg-gray px-6 py-3 text-green ring-gray transition-all before:absolute before:inset-0 before:-z-10 before:m-auto before:h-32 before:w-32 before:scale-0 before:rounded-full before:bg-green before:transition-transform before:duration-200 hover:text-gray hover:ring before:hover:scale-100 before:hover:duration-500"
+              class="relative z-10 overflow-hidden rounded-full bg-gray px-6 py-3 text-green ring-gray transition-all before:absolute before:inset-0 before:-z-10 before:m-auto before:h-32 before:w-32 before:scale-0 before:rounded-full before:bg-green before:transition-transform before:duration-200 hover:text-gray hover:ring before:hover:scale-100 before:hover:duration-500 focus:outline-none focus-visible:text-gray focus-visible:ring before:focus-visible:scale-100 before:focus-visible:duration-500"
             >
               Instagram
             </button>
@@ -509,7 +511,7 @@
           >
             <p>Daj znać, co możemy dla Ciebie zrobić!</p>
             <button
-              class="relative overflow-hidden rounded-full bg-green px-6 py-3 text-gray ring-gray transition-all before:absolute before:-left-1/4 before:top-0 before:h-full before:w-1/12 before:skew-x-12 before:bg-gray/10 before:brightness-200 before:transition-transform before:duration-1000 hover:ring before:hover:translate-x-72"
+              class="relative overflow-hidden rounded-full bg-green px-6 py-3 text-gray ring-gray transition-all before:absolute before:-left-1/4 before:top-0 before:h-full before:w-1/12 before:skew-x-12 before:bg-gray/10 before:brightness-200 before:transition-transform before:duration-1000 hover:ring before:hover:translate-x-72 focus:outline-none focus-visible:ring before:focus-visible:translate-x-72"
             >
               Skontaktuj się z nami
             </button>
