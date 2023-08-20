@@ -7,23 +7,38 @@ function toggleMultipleClasses(element, ...classes) {
 }
 
 // expand images
-
 const expandImagesBtn = document.querySelector("#expand-images-btn");
 const collapseImagesBtn = document.querySelector("#collapse-images-btn");
+const imagesOverlay = document.querySelector("#images-overlay");
+const images = document.querySelectorAll(".masonry-grid-item");
 
-function expandCollapseImagesSection(action) {
+function checkIfFocusable() {
+  images.forEach((image) => {
+    if (
+      image.getBoundingClientRect().top >
+      imagesOverlay.getBoundingClientRect().top
+    ) {
+      image.tabIndex = "-1";
+    }
+  });
+}
+
+checkIfFocusable(); // to prevent focusing images that are not visible
+
+function expandCollapseImagesSection(action = "expand") {
   const imagesContainer = document.querySelector("#realizacje");
-  const imagesOverlay = document.querySelector("#images-overlay");
   if (action === "expand") {
     expandImagesBtn.classList.replace("flex", "hidden");
     collapseImagesBtn.classList.replace("hidden", "flex");
     imagesContainer.classList.replace("max-h-[200vh]", "max-h-[1000vh]");
+    images.forEach((image) => (image.tabIndex = "0"));
   } else if (action === "collapse") {
     expandImagesBtn.classList.replace("hidden", "flex");
     collapseImagesBtn.classList.replace("flex", "hidden");
     imagesContainer.classList.replace("max-h-[1000vh]", "max-h-[200vh]");
+    checkIfFocusable();
   }
-  imagesOverlay.classList.toggle("opacity-0");
+  toggleMultipleClasses(imagesOverlay, "opacity-0", "pointer-events-none");
 }
 
 expandImagesBtn.addEventListener("click", () =>
@@ -31,6 +46,9 @@ expandImagesBtn.addEventListener("click", () =>
 );
 collapseImagesBtn.addEventListener("click", () =>
   expandCollapseImagesSection("collapse"),
+);
+imagesOverlay.addEventListener("click", () =>
+  expandCollapseImagesSection("expand"),
 );
 
 // burger mobile menu
@@ -151,7 +169,6 @@ prevHeroBtn.addEventListener("click", () => {
 
 // popup image gallery
 
-const images = document.querySelectorAll(".masonry-grid-item");
 const popupGallery = document.querySelector("#popup-gallery");
 const popupImage = document.querySelector("#popup-image");
 const popupGalleryThumbnails = document.querySelectorAll(".popup-thumbnail");

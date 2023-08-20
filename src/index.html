@@ -6,6 +6,12 @@
     <link href="/src/css/reset.css" rel="stylesheet" />
     <link href="/src/css/masonry.css" rel="stylesheet" />
     <link href="/dist/output.css" rel="stylesheet" />
+    <script
+      defer
+      src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"
+    ></script>
+    <script defer src="./js/masonry.js"></script>
+    <script defer src="./js/main.js"></script>
     <title>GiardDesign | Nowoczesne ogrody</title>
   </head>
 
@@ -369,7 +375,7 @@
       >
         <div
           id="images-overlay"
-          class="pointer-events-none absolute inset-0 z-10 w-full bg-gradient-to-b from-beige/0 to-beige/100 transition-opacity duration-1000"
+          class="absolute bottom-0 left-0 right-0 top-[800px] z-10 w-full cursor-pointer bg-gradient-to-b from-beige/0 to-beige/100 transition-opacity duration-1000"
         ></div>
         <button
           id="expand-images-btn"
@@ -394,84 +400,100 @@
         </div>
         <div class="masonry-grid">
           <img
+            tabindex="0"
             src="./assets/garden-1.jpg"
             alt=""
-            class="masonry-grid-item cursor-pointer"
+            class="masonry-grid-item cursor-pointer transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
+            tabindex="0"
             src="./assets/garden-2.jpg"
             alt=""
-            class="masonry-grid-item cursor-pointer"
+            class="masonry-grid-item cursor-pointer transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
+            tabindex="0"
             src="./assets/garden-3.jpg"
             alt=""
-            class="masonry-grid-item cursor-pointer"
+            class="masonry-grid-item cursor-pointer transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
+            tabindex="0"
             src="./assets/garden-4.jpg"
             alt=""
-            class="masonry-grid-item cursor-pointer"
+            class="masonry-grid-item cursor-pointer transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
+            tabindex="0"
             src="./assets/garden-5.jpg"
             alt=""
-            class="masonry-grid-item cursor-pointer"
+            class="masonry-grid-item cursor-pointer transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
+            tabindex="0"
             src="./assets/garden-6.jpg"
             alt=""
-            class="masonry-grid-item cursor-pointer"
+            class="masonry-grid-item cursor-pointer transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
+            tabindex="0"
             src="./assets/garden-7.jpg"
             alt=""
-            class="masonry-grid-item cursor-pointer"
+            class="masonry-grid-item cursor-pointer transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
+            tabindex="0"
             src="./assets/garden-8.jpg"
             alt=""
-            class="masonry-grid-item cursor-pointer"
+            class="masonry-grid-item cursor-pointer transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
+            tabindex="0"
             src="./assets/garden-9.jpg"
             alt=""
-            class="masonry-grid-item cursor-pointer"
+            class="masonry-grid-item cursor-pointer transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
+            tabindex="0"
             src="./assets/garden-11.jpg"
             alt=""
-            class="masonry-grid-item cursor-pointer"
+            class="masonry-grid-item cursor-pointer transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
+            tabindex="0"
             src="./assets/garden-12.jpg"
             alt=""
-            class="masonry-grid-item cursor-pointer"
+            class="masonry-grid-item cursor-pointer transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
+            tabindex="0"
             src="./assets/garden-13.jpg"
             alt=""
-            class="masonry-grid-item cursor-pointer"
+            class="masonry-grid-item cursor-pointer transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
+            tabindex="0"
             src="./assets/garden-14.jpg"
             alt=""
-            class="masonry-grid-item cursor-pointer"
+            class="masonry-grid-item cursor-pointer transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
+            tabindex="0"
             src="./assets/garden-15.jpg"
             alt=""
-            class="masonry-grid-item cursor-pointer"
+            class="masonry-grid-item cursor-pointer transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
+            tabindex="0"
             src="./assets/garden-16.jpg"
             alt=""
-            class="masonry-grid-item cursor-pointer"
+            class="masonry-grid-item cursor-pointer transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
+            tabindex="0"
             src="./assets/garden-17.jpg"
             alt=""
-            class="masonry-grid-item cursor-pointer"
+            class="masonry-grid-item cursor-pointer transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
         </div>
       </section>
@@ -520,10 +542,26 @@
         <hr />
         <div class="flex flex-col gap-4 text-sm xl:flex-row xl:gap-0">
           <ul class="flex flex-wrap gap-2 md:gap-4 lg:gap-12">
-            <li>Kontakt</li>
-            <li>Instagram</li>
-            <li>Facebook</li>
-            <li>LinkedIn</li>
+            <li>
+              <a href="#kontakt" class="hover:underline focus-visible:underline"
+                >Kontakt</a
+              >
+            </li>
+            <li>
+              <a href="#kontakt" class="hover:underline focus-visible:underline"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a href="#kontakt" class="hover:underline focus-visible:underline"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="#kontakt" class="hover:underline focus-visible:underline"
+                >LinkedIn</a
+              >
+            </li>
           </ul>
           <ul class="flex flex-wrap gap-2 md:gap-4 lg:gap-12 xl:ml-auto">
             <li>000-000-000</li>
@@ -661,12 +699,5 @@
         />
       </div>
     </div>
-
-    <script
-      defer
-      src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"
-    ></script>
-    <script defer src="./js/masonry.js"></script>
-    <script defer src="./js/main.js"></script>
   </body>
 </html>
