@@ -62,9 +62,11 @@ function toggleBurgerMenu() {
   if (menu.classList.contains("opacity-0")) {
     menu.classList.remove("invisible");
     menu.classList.replace("opacity-0", "opacity-100");
+    burgerMenuBtn.setAttribute("aria-expanded", "true");
     isMenuOpened = true;
   } else {
     menu.classList.replace("opacity-100", "opacity-0");
+    burgerMenuBtn.setAttribute("aria-expanded", "false");
     isMenuOpened = false;
     setTimeout(() => {
       menu.classList.add("invisible");

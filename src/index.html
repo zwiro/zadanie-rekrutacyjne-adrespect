@@ -19,6 +19,7 @@
   <body class="relative bg-gray font-inter text-black">
     <header>
       <nav
+        role="navigation"
         class="animate-slideFromTop flex items-center bg-white px-8 py-6 sm:px-16 lg:px-[89px]"
       >
         <h1 class="animate-fadeInDelay" opacity-0>
@@ -27,6 +28,8 @@
         <button
           id="burger-menu-btn"
           aria-label="Otwórz menu mobilne"
+          aria-expanded="false"
+          aria-controls="menu"
           class="fixed right-8 top-8 z-30 ml-auto h-1 w-8 bg-black transition-all before:absolute before:-top-2 before:left-0 before:h-1 before:w-8 before:bg-black before:transition-all after:absolute after:left-0 after:top-2 after:h-1 after:w-8 after:bg-black after:transition-all md:hidden"
         ></button>
         <ul
@@ -634,6 +637,9 @@
 
     <div
       id="popup-gallery"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Galeria zdjęć"
       class="invisible fixed inset-0 z-50 bg-black/50 opacity-0 backdrop-blur transition-opacity"
     >
       <div
