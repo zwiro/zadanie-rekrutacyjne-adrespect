@@ -274,3 +274,16 @@ function changeImageByThumbnail(thumbnail) {
 popupGalleryThumbnails.forEach((thumbnail) => {
   thumbnail.addEventListener("click", changeImageByThumbnail);
 });
+
+// mouse tracking blob
+
+const mouseTracker = document.querySelector("#mouse-tracker");
+const offerSection = document.querySelector("#oferta");
+const offerSectionRect = offerSection.getBoundingClientRect();
+
+window.addEventListener("mousemove", (event) => {
+  const Xpercentage = (event.clientX / window.innerWidth) * 100;
+  const Ypercentage = (event.clientY / window.innerHeight) * 100;
+  mouseTracker.style.left = `${Xpercentage}%`;
+  mouseTracker.style.top = `${Ypercentage}%`;
+});

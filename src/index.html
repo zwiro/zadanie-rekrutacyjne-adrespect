@@ -9,6 +9,7 @@
     />
     <link rel="icon" href="/favicon.ico" />
     <link href="/src/css/masonry.css" rel="stylesheet" />
+    <link href="/src/css/general.css" rel="stylesheet" />
     <link href="/dist/output.css" rel="stylesheet" />
     <script defer src="./js/masonry.pkgd.min.js"></script>
     <script defer src="./js/imagesloaded.pkgd.min.js"></script>
@@ -266,8 +267,9 @@
         class="group/tracker relative flex min-h-[939px] flex-col gap-8 px-8 pb-16 pt-16 sm:gap-16 sm:px-16 sm:pb-40 lg:gap-24 lg:px-[89px] lg:pt-[120px]"
       >
         <div
+          aria-hidden="true"
           id="mouse-tracker"
-          class="absolute hidden h-24 w-24 bg-green blur-3xl group-hover/tracker:block"
+          class="absolute h-24 w-24 bg-green opacity-0 blur-3xl transition-opacity group-hover/tracker:opacity-100"
         ></div>
         <div
           class="scroll-animation flex max-w-[1040px] flex-col gap-4 opacity-0 lg:mx-auto"
@@ -291,7 +293,7 @@
         </div>
         <div class="flex flex-col gap-8 sm:gap-16 lg:flex-row">
           <div
-            class="scroll-animation--slideFromLeft scroll-animation relative order-1 flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition-all before:absolute before:-inset-y-1 before:inset-x-0 before:-z-20 before:scale-x-0 before:rounded-3xl before:bg-red-500 before:transition-transform before:duration-500 after:absolute after:inset-0 after:-z-10 after:rounded-3xl after:bg-white focus-within:scale-105 focus-within:shadow-lg hover:scale-105 hover:shadow-lg before:hover:scale-x-100 before:hover:duration-1000"
+            class="lg:scroll-animation--slideFromLeft scroll-animation relative order-1 flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition-all before:absolute before:-inset-y-1 before:inset-x-0 before:-z-20 before:scale-x-0 before:rounded-3xl before:bg-red-500 before:transition-transform before:duration-500 after:absolute after:inset-0 after:-z-10 after:rounded-3xl after:bg-white focus-within:scale-105 focus-within:shadow-lg hover:scale-105 hover:shadow-lg before:hover:scale-x-100 before:hover:duration-1000"
           >
             <div class="flex flex-col items-start gap-8">
               <img
@@ -324,7 +326,7 @@
             </a>
           </div>
           <div
-            class="scroll-animation--slideFromBottom scroll-animation relative order-2 flex w-full flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition-all before:absolute before:-inset-y-1 before:inset-x-0 before:-z-20 before:scale-x-0 before:rounded-3xl before:bg-green before:transition-transform before:duration-500 after:absolute after:inset-0 after:-z-10 after:rounded-3xl after:bg-white focus-within:shadow-lg hover:shadow-lg before:hover:scale-x-100 before:hover:duration-1000"
+            class="lg:scroll-animation--slideFromBottom scroll-animation relative order-2 flex w-full flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition-all before:absolute before:-inset-y-1 before:inset-x-0 before:-z-20 before:scale-x-0 before:rounded-3xl before:bg-green before:transition-transform before:duration-500 after:absolute after:inset-0 after:-z-10 after:rounded-3xl after:bg-white focus-within:shadow-lg hover:shadow-lg before:hover:scale-x-100 before:hover:duration-1000"
           >
             <div class="flex flex-col items-start gap-8">
               <img
@@ -357,7 +359,7 @@
             </a>
           </div>
           <div
-            class="scroll-animation--slideFromRight scroll-animation relative z-10 order-3 flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition-all before:absolute before:-inset-y-1 before:inset-x-0 before:-z-20 before:scale-x-0 before:rounded-3xl before:bg-blue-500 before:transition-transform before:duration-500 after:absolute after:inset-0 after:-z-10 after:rounded-3xl after:bg-white focus-within:shadow-lg hover:shadow-xl before:hover:scale-x-100 before:hover:duration-1000"
+            class="lg:scroll-animation--slideFromRight scroll-animation relative z-10 order-3 flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition-all before:absolute before:-inset-y-1 before:inset-x-0 before:-z-20 before:scale-x-0 before:rounded-3xl before:bg-blue-500 before:transition-transform before:duration-500 after:absolute after:inset-0 after:-z-10 after:rounded-3xl after:bg-white focus-within:shadow-lg hover:shadow-xl before:hover:scale-x-100 before:hover:duration-1000"
           >
             <div class="flex flex-col items-start gap-8">
               <img
@@ -445,6 +447,7 @@
       >
         <div
           id="images-overlay"
+          aria-hidden="true"
           class="absolute bottom-0 left-0 right-0 top-[800px] z-10 w-full cursor-pointer bg-gradient-to-b from-beige/0 to-beige/100 transition-opacity duration-1000"
         ></div>
 
@@ -593,9 +596,7 @@
           <div
             class="my-auto flex w-auto flex-col items-start gap-6 leading-150 lg:w-1/5"
           >
-            <p class="whitespace-nowrap tracking-4 md:whitespace-normal">
-              Śledź nasze najnowsze realizacje!
-            </p>
+            <p class="tracking-4">Śledź nasze najnowsze realizacje!</p>
             <a
               href="https://www.instagram.com/"
               target="_blank"
@@ -692,7 +693,7 @@
           <img src="./assets/arrow-gray.svg" alt="" />
         </button>
       </div>
-      <div class="relative grid h-[90vh] w-full place-items-center">
+      <div class="relative grid h-screen w-full place-items-center sm:h-[90vh]">
         <img
           id="popup-image"
           src="./assets/garden-1.webp"

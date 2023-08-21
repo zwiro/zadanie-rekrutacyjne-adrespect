@@ -2,22 +2,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-html {
-  scroll-behavior: smooth;
-}
-
-.scroll-animation:hover #pencil-icon {
-  filter: invert(30%) sepia(82%) saturate(1364%) hue-rotate(334deg)
-    brightness(107%) contrast(88%);
-}
-
-.scroll-animation:hover #eye-icon {
-  filter: invert(25%) sepia(28%) saturate(1066%) hue-rotate(88deg)
-    brightness(101%) contrast(91%);
-}
-
-.scroll-animation:hover #stars-icon {
-  filter: invert(37%) sepia(80%) saturate(1778%) hue-rotate(205deg)
-    brightness(102%) contrast(93%);
-}
