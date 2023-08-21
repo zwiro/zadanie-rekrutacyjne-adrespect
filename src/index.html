@@ -17,8 +17,10 @@
 
   <body class="relative bg-gray font-inter text-black">
     <header>
-      <nav class="flex items-center bg-white px-8 py-6 sm:px-16 lg:px-[89px]">
-        <h1>
+      <nav
+        class="animate-slideFromTop flex items-center bg-white px-8 py-6 sm:px-16 lg:px-[89px]"
+      >
+        <h1 class="animate-fadeInDelay" opacity-0>
           <img src="./assets/giarddesign.svg" alt="GiardDesign" />
         </h1>
         <button
@@ -30,7 +32,10 @@
           id="menu"
           class="tracking-1 invisible fixed bottom-0 right-0 top-0 z-20 ml-auto flex h-full translate-x-full flex-col items-start gap-12 bg-white px-8 py-4 pt-[68px] text-[14px] opacity-0 shadow-xl transition md:visible md:static md:h-6 md:translate-x-0 md:flex-row md:items-center md:gap-4 md:bg-transparent md:p-0 md:opacity-100 md:shadow-none lg:gap-12"
         >
-          <li tabindex="0" class="group relative cursor-pointer">
+          <li
+            tabindex="0"
+            class="animate-fadeInDelay2 group relative cursor-pointer opacity-0"
+          >
             <div class="flex gap-[5px]">
               Oferta
               <img src="./assets/chevron.svg" alt="" />
@@ -52,25 +57,25 @@
           <li>
             <a
               href="#o-firmie"
-              class="relative after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:bg-green after:transition-transform after:hover:scale-x-100 after:focus-visible:scale-x-100"
+              class="animate-fadeInDelay3 relative opacity-0 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:bg-green after:transition-transform after:hover:scale-x-100 after:focus-visible:scale-x-100"
               >O firmie</a
             >
           </li>
           <li>
             <a
               href="#realizacje"
-              class="relative after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:bg-green after:transition-transform after:hover:scale-x-100 after:focus-visible:scale-x-100"
+              class="animate-fadeInDelay4 relative opacity-0 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:bg-green after:transition-transform after:hover:scale-x-100 after:focus-visible:scale-x-100"
               >Realizacje</a
             >
           </li>
           <li>
             <a
               href="#kontakt"
-              class="relative after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:bg-green after:transition-transform after:hover:scale-x-100 after:focus-visible:scale-x-100"
+              class="animate-fadeInDelay5 relative opacity-0 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:bg-green after:transition-transform after:hover:scale-x-100 after:focus-visible:scale-x-100"
               >Kontakt</a
             >
           </li>
-          <li class="flex items-center">
+          <li class="animate-fadeInDelay6 flex items-center opacity-0">
             <button id="open-searchbar-btn" aria-label="Otwórz wyszukiwarkę">
               <img
                 src="./assets/glass.svg"

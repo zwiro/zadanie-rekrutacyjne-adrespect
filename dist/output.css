@@ -862,6 +862,80 @@ video {
   animation: fadeIn 1s;
 }
 
+@keyframes fadeIn{
+  100%{
+    opacity: 1;
+  }
+}
+
+.animate-fadeInDelay{
+  animation: fadeIn 1s 1.2s forwards;
+}
+
+@keyframes fadeIn{
+  100%{
+    opacity: 1;
+  }
+}
+
+.animate-fadeInDelay2{
+  animation: fadeIn 1s 1.4s forwards;
+}
+
+@keyframes fadeIn{
+  100%{
+    opacity: 1;
+  }
+}
+
+.animate-fadeInDelay3{
+  animation: fadeIn 1s 1.6s forwards;
+}
+
+@keyframes fadeIn{
+  100%{
+    opacity: 1;
+  }
+}
+
+.animate-fadeInDelay4{
+  animation: fadeIn 1s 1.8s forwards;
+}
+
+@keyframes fadeIn{
+  100%{
+    opacity: 1;
+  }
+}
+
+.animate-fadeInDelay5{
+  animation: fadeIn 1s 2s forwards;
+}
+
+@keyframes fadeIn{
+  100%{
+    opacity: 1;
+  }
+}
+
+.animate-fadeInDelay6{
+  animation: fadeIn 1s 2.2s forwards;
+}
+
+@keyframes slideFromTop{
+  0%{
+    transform: translateY(-100%);
+  }
+
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.animate-slideFromTop{
+  animation: slideFromTop 1s;
+}
+
 .cursor-pointer{
   cursor: pointer;
 }

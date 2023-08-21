@@ -31,9 +31,20 @@ module.exports = {
         fadeIn: {
           "100%": { opacity: 1 },
         },
+        slideFromTop: {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(0)" },
+        },
       },
       animation: {
         fadeIn: "fadeIn 1s",
+        fadeInDelay: "fadeIn 1s 1.2s forwards",
+        fadeInDelay2: "fadeIn 1s 1.4s forwards",
+        fadeInDelay3: "fadeIn 1s 1.6s forwards",
+        fadeInDelay4: "fadeIn 1s 1.8s forwards",
+        fadeInDelay5: "fadeIn 1s 2s forwards",
+        fadeInDelay6: "fadeIn 1s 2.2s forwards",
+        slideFromTop: "slideFromTop 1s",
       },
     },
   },
