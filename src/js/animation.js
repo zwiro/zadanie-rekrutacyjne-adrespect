@@ -4,11 +4,8 @@ const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        if (entry.target.classList.contains("opacity-0")) {
+        if (entry.target.classList.contains("scroll-animation--fadeIn")) {
           entry.target.classList.add("animate-fadeIn");
-          setTimeout(() => {
-            entry.target.classList.remove("opacity-0");
-          }, 1000);
         } else if (
           entry.target.classList.contains("scroll-animation--slideFromLeft")
         ) {
@@ -22,6 +19,9 @@ const observer = new IntersectionObserver(
         ) {
           entry.target.classList.add("lg:animate-slideFromBottom");
         }
+        setTimeout(() => {
+          entry.target.classList.remove("opacity-0");
+        }, 1000);
       }
     });
   },
