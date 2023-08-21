@@ -946,48 +946,6 @@ video {
   animation: fadeIn 1s 2.2s forwards;
 }
 
-@keyframes slideFromBottom{
-  0%{
-    transform: translateY(100%);
-  }
-
-  100%{
-    transform: translateY(0);
-  }
-}
-
-.animate-slideFromBottom{
-  animation: slideFromBottom 1s;
-}
-
-@keyframes slideFromLeft{
-  0%{
-    transform: translateX(-100%);
-  }
-
-  100%{
-    transform: translateX(0);
-  }
-}
-
-.animate-slideFromLeft{
-  animation: slideFromLeft 1s;
-}
-
-@keyframes slideFromRight{
-  0%{
-    transform: translateX(100%);
-  }
-
-  100%{
-    transform: translateX(0);
-  }
-}
-
-.animate-slideFromRight{
-  animation: slideFromRight 1s;
-}
-
 @keyframes slideFromTop{
   0%{
     transform: translateY(-100%);
@@ -2079,10 +2037,6 @@ video {
     width: 33.333333%;
   }
 
-  .sm\:w-1\/4{
-    width: 25%;
-  }
-
   .sm\:w-2\/3{
     width: 66.666667%;
   }
@@ -2284,6 +2238,48 @@ video {
 
   .lg\:w-48{
     width: 12rem;
+  }
+
+  @keyframes slideFromBottom{
+    0%{
+      transform: translateY(100%);
+    }
+
+    100%{
+      transform: translateY(0);
+    }
+  }
+
+  .lg\:animate-slideFromBottom{
+    animation: slideFromBottom 1s;
+  }
+
+  @keyframes slideFromLeft{
+    0%{
+      transform: translateX(-100%);
+    }
+
+    100%{
+      transform: translateX(0);
+    }
+  }
+
+  .lg\:animate-slideFromLeft{
+    animation: slideFromLeft 1s;
+  }
+
+  @keyframes slideFromRight{
+    0%{
+      transform: translateX(100%);
+    }
+
+    100%{
+      transform: translateX(0);
+    }
+  }
+
+  .lg\:animate-slideFromRight{
+    animation: slideFromRight 1s;
   }
 
   .lg\:flex-row{
