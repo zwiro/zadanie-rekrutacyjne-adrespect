@@ -263,9 +263,15 @@
     <main>
       <section
         id="oferta"
-        class="scroll-animation flex min-h-[939px] flex-col gap-8 px-8 pb-16 pt-16 opacity-0 sm:gap-16 sm:px-16 sm:pb-40 lg:gap-24 lg:px-[89px] lg:pt-[120px]"
+        class="group/tracker relative flex min-h-[939px] flex-col gap-8 px-8 pb-16 pt-16 sm:gap-16 sm:px-16 sm:pb-40 lg:gap-24 lg:px-[89px] lg:pt-[120px]"
       >
-        <div class="flex max-w-[1040px] flex-col gap-4 lg:mx-auto">
+        <div
+          id="mouse-tracker"
+          class="absolute hidden h-24 w-24 bg-green blur-3xl group-hover/tracker:block"
+        ></div>
+        <div
+          class="scroll-animation flex max-w-[1040px] flex-col gap-4 opacity-0 lg:mx-auto"
+        >
           <h2 class="text-[12px] leading-150 tracking-1 text-green">Oferta</h2>
           <div class="flex flex-col gap-4 sm:gap-8">
             <h3
@@ -285,10 +291,15 @@
         </div>
         <div class="flex flex-col gap-8 sm:gap-16 lg:flex-row">
           <div
-            class="flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition focus-within:scale-105 focus-within:shadow-lg hover:scale-105 hover:shadow-lg"
+            class="scroll-animation--slideFromLeft scroll-animation relative order-1 flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition-all before:absolute before:-inset-y-1 before:inset-x-0 before:-z-20 before:scale-x-0 before:rounded-3xl before:bg-red-500 before:transition-transform before:duration-500 after:absolute after:inset-0 after:-z-10 after:rounded-3xl after:bg-white focus-within:scale-105 focus-within:shadow-lg hover:scale-105 hover:shadow-lg before:hover:scale-x-100 before:hover:duration-1000"
           >
             <div class="flex flex-col items-start gap-8">
-              <img src="./assets/pencil.svg" alt="" />
+              <img
+                src="./assets/pencil.svg"
+                alt=""
+                id="pencil-icon"
+                class="transition-all"
+              />
               <div class="flex flex-col gap-3">
                 <h3
                   class="font-montserrat text-2xl font-medium tracking-5 xl:text-[28px]"
@@ -313,10 +324,15 @@
             </a>
           </div>
           <div
-            class="flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition focus-within:scale-105 focus-within:shadow-lg hover:scale-105 hover:shadow-lg"
+            class="scroll-animation--slideFromBottom scroll-animation relative order-2 flex w-full flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition-all before:absolute before:-inset-y-1 before:inset-x-0 before:-z-20 before:scale-x-0 before:rounded-3xl before:bg-green before:transition-transform before:duration-500 after:absolute after:inset-0 after:-z-10 after:rounded-3xl after:bg-white focus-within:shadow-lg hover:shadow-lg before:hover:scale-x-100 before:hover:duration-1000"
           >
             <div class="flex flex-col items-start gap-8">
-              <img src="./assets/eye.svg" alt="" />
+              <img
+                src="./assets/eye.svg"
+                alt=""
+                id="eye-icon"
+                class="transition-all"
+              />
               <div class="flex flex-col gap-3">
                 <h3
                   class="font-montserrat text-2xl font-medium tracking-5 xl:text-[28px]"
@@ -341,10 +357,15 @@
             </a>
           </div>
           <div
-            class="flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition focus-within:scale-105 focus-within:shadow-lg hover:scale-105 hover:shadow-lg"
+            class="scroll-animation--slideFromRight scroll-animation relative z-10 order-3 flex flex-1 flex-col justify-between rounded-3xl bg-white px-10 py-12 transition-all before:absolute before:-inset-y-1 before:inset-x-0 before:-z-20 before:scale-x-0 before:rounded-3xl before:bg-blue-500 before:transition-transform before:duration-500 after:absolute after:inset-0 after:-z-10 after:rounded-3xl after:bg-white focus-within:shadow-lg hover:shadow-xl before:hover:scale-x-100 before:hover:duration-1000"
           >
             <div class="flex flex-col items-start gap-8">
-              <img src="./assets/stars.svg" alt="" />
+              <img
+                src="./assets/stars.svg"
+                alt=""
+                id="stars-icon"
+                class="transition-all"
+              />
               <div class="flex flex-col gap-3">
                 <h3
                   class="font-montserrat text-2xl font-medium tracking-5 xl:text-[28px]"
@@ -439,119 +460,102 @@
         </div>
         <div class="masonry-grid">
           <img
-            loading="lazy"
             tabindex="0"
             src="./assets/garden-1.webp"
             alt="Widok na ogród przez otwarte drzwi w kamiennej ścianie"
             class="masonry-grid-item scroll-animation cursor-pointer opacity-0 transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
-            loading="lazy"
             tabindex="0"
             src="./assets/garden-2.webp"
             alt="Ścieżka prowadząca przez ogród na schody"
             class="masonry-grid-item scroll-animation cursor-pointer opacity-0 transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
-            loading="lazy"
             tabindex="0"
             src="./assets/garden-3.webp"
             alt="Żwirowa ścieżka prowadząca przez ogród pomiędzy drzewami"
             class="masonry-grid-item scroll-animation cursor-pointer opacity-0 transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
-            loading="lazy"
             tabindex="0"
             src="./assets/garden-4.webp"
             alt="Rośliny stojące pod przeszkloną ścianą"
             class="masonry-grid-item scroll-animation cursor-pointer opacity-0 transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
-            loading="lazy"
             tabindex="0"
             src="./assets/garden-5.webp"
             alt="Ogród pomiędzy drzewami z widocznym stolikiem i trzema krzesłami oraz domkiem na drzewie"
             class="masonry-grid-item scroll-animation cursor-pointer opacity-0 transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
-            loading="lazy"
             tabindex="0"
             src="./assets/garden-6.webp"
             alt="Ceglana ścieżka prowadząca przez ogród"
             class="masonry-grid-item scroll-animation cursor-pointer opacity-0 transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
-            loading="lazy"
             tabindex="0"
             src="./assets/garden-7.webp"
             alt="Fontanna w ogrodzie, do której prowadzi żwirowa ścieżka"
             class="masonry-grid-item scroll-animation cursor-pointer opacity-0 transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
-            loading="lazy"
             tabindex="0"
             src="./assets/garden-8.webp"
             alt="Przystryżony trawnik oraz rośliny znajdujące sie pod schodami"
             class="masonry-grid-item scroll-animation cursor-pointer opacity-0 transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
-            loading="lazy"
             tabindex="0"
             src="./assets/garden-9.webp"
             alt="Kamienna ścieżka prowadząca przez ogród pomiędzy roślinami"
             class="masonry-grid-item scroll-animation cursor-pointer opacity-0 transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
-            loading="lazy"
             tabindex="0"
             src="./assets/garden-10.webp"
             alt="Kamienna ścieżka prowadząca pomiędzy drzewami oraz kamiennym murem"
             class="masonry-grid-item scroll-animation cursor-pointer opacity-0 transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
-            loading="lazy"
             tabindex="0"
             src="./assets/garden-11.webp"
             alt="Rośliny oraz schody znajdujące się wenątrz szklarni"
             class="masonry-grid-item scroll-animation cursor-pointer opacity-0 transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
-            loading="lazy"
             tabindex="0"
             src="./assets/garden-12.webp"
             alt="Drewniana huśtawka kilkuosobowa pod drzewem"
             class="masonry-grid-item scroll-animation cursor-pointer opacity-0 transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
-            loading="lazy"
             tabindex="0"
             src="./assets/garden-13.webp"
             alt="Kamienna ścieżka pod kwiatami, oświetlona przez lampy"
             class="masonry-grid-item scroll-animation cursor-pointer opacity-0 transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
-            loading="lazy"
             tabindex="0"
             src="./assets/garden-14.webp"
             alt="Żwirowa ścieżka prowadząca przez ogród, po jej bokach widoczne drzewa i kwiaty"
             class="masonry-grid-item scroll-animation cursor-pointer opacity-0 transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
-            loading="lazy"
             tabindex="0"
             src="./assets/garden-15.webp"
             alt="Wąska kamienna ścieżka prowadząca przez wysoką trawę i kwiaty"
             class="masonry-grid-item scroll-animation cursor-pointer opacity-0 transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
-            loading="lazy"
             tabindex="0"
             src="./assets/garden-16.webp"
             alt="Kamienna ścieżka prez ogród prowadząca do fontanny i drewnianej ławki"
             class="masonry-grid-item scroll-animation cursor-pointer opacity-0 transition hover:scale-105 hover:brightness-125 focus-visible:scale-105 focus-visible:brightness-125"
           />
           <img
-            loading="lazy"
             tabindex="0"
             src="./assets/garden-17.webp"
             alt="Kamienna ścieżka pomiędzy kwiatami, prowadząca do bramy"
@@ -712,7 +716,6 @@
         class="absolute inset-x-0 bottom-2 mx-auto hidden gap-1 sm:flex sm:justify-center"
       >
         <img
-          loading="lazy"
           src="./assets/garden-1.webp"
           width="48"
           height="48"
@@ -720,7 +723,6 @@
           class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
         />
         <img
-          loading="lazy"
           src="./assets/garden-2.webp"
           width="48"
           height="48"
@@ -728,7 +730,6 @@
           class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
         />
         <img
-          loading="lazy"
           src="./assets/garden-3.webp"
           width="48"
           height="48"
@@ -736,7 +737,6 @@
           class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
         />
         <img
-          loading="lazy"
           src="./assets/garden-4.webp"
           width="48"
           height="48"
@@ -744,7 +744,6 @@
           class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
         />
         <img
-          loading="lazy"
           src="./assets/garden-5.webp"
           width="48"
           height="48"
@@ -752,7 +751,6 @@
           class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
         />
         <img
-          loading="lazy"
           src="./assets/garden-6.webp"
           width="48"
           height="48"
@@ -760,7 +758,6 @@
           class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
         />
         <img
-          loading="lazy"
           src="./assets/garden-7.webp"
           width="48"
           height="48"
@@ -768,7 +765,6 @@
           class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
         />
         <img
-          loading="lazy"
           src="./assets/garden-8.webp"
           width="48"
           height="48"
@@ -776,7 +772,6 @@
           class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
         />
         <img
-          loading="lazy"
           src="./assets/garden-9.webp"
           width="48"
           height="48"
@@ -784,7 +779,6 @@
           class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
         />
         <img
-          loading="lazy"
           src="./assets/garden-10.webp"
           width="48"
           height="48"
@@ -792,7 +786,6 @@
           class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
         />
         <img
-          loading="lazy"
           src="./assets/garden-11.webp"
           width="48"
           height="48"
@@ -800,7 +793,6 @@
           class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
         />
         <img
-          loading="lazy"
           src="./assets/garden-12.webp"
           width="48"
           height="48"
@@ -808,7 +800,6 @@
           class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
         />
         <img
-          loading="lazy"
           src="./assets/garden-13.webp"
           width="48"
           height="48"
@@ -816,7 +807,6 @@
           class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
         />
         <img
-          loading="lazy"
           src="./assets/garden-14.webp"
           width="48"
           height="48"
@@ -824,7 +814,6 @@
           class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
         />
         <img
-          loading="lazy"
           src="./assets/garden-15.webp"
           width="48"
           height="48"
@@ -832,7 +821,6 @@
           class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
         />
         <img
-          loading="lazy"
           src="./assets/garden-16.webp"
           width="48"
           height="48"
@@ -840,7 +828,6 @@
           class="popup-thumbnail h-12 w-12 cursor-pointer object-fill ring-gray"
         />
         <img
-          loading="lazy"
           src="./assets/garden-17.webp"
           width="48"
           height="48"

@@ -35,6 +35,18 @@ module.exports = {
           "0%": { transform: "translateY(-100%)" },
           "100%": { transform: "translateY(0)" },
         },
+        slideFromBottom: {
+          "0%": { transform: "translateY(100%)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        slideFromRight: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        slideFromLeft: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
       },
       animation: {
         fadeIn: "fadeIn 1s",
@@ -45,6 +57,9 @@ module.exports = {
         fadeInDelay5: "fadeIn 1s 2s forwards",
         fadeInDelay6: "fadeIn 1s 2.2s forwards",
         slideFromTop: "slideFromTop 1s",
+        slideFromLeft: "slideFromLeft 1s forwards",
+        slideFromRight: "slideFromRight 1s forwards",
+        slideFromBottom: "slideFromBottom 1s forwards",
       },
     },
   },
