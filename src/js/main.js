@@ -278,8 +278,6 @@ popupGalleryThumbnails.forEach((thumbnail) => {
 // mouse tracking blob
 
 const mouseTracker = document.querySelector("#mouse-tracker");
-const offerSection = document.querySelector("#oferta");
-const offerSectionRect = offerSection.getBoundingClientRect();
 
 window.addEventListener("mousemove", (event) => {
   const Xpercentage = (event.clientX / window.innerWidth) * 100;

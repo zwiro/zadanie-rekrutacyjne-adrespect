@@ -731,10 +731,6 @@ video {
   height: 83.333333%;
 }
 
-.h-\[90vh\]{
-  height: 90vh;
-}
-
 .h-full{
   height: 100%;
 }
@@ -757,10 +753,6 @@ video {
 
 .max-h-\[95\%\]{
   max-height: 95%;
-}
-
-.max-h-full{
-  max-height: 100%;
 }
 
 .min-h-\[720px\]{
@@ -965,7 +957,7 @@ video {
 }
 
 .animate-slideFromBottom{
-  animation: slideFromBottom 1s forwards;
+  animation: slideFromBottom 1s;
 }
 
 @keyframes slideFromLeft{
@@ -979,7 +971,7 @@ video {
 }
 
 .animate-slideFromLeft{
-  animation: slideFromLeft 1s forwards;
+  animation: slideFromLeft 1s;
 }
 
 @keyframes slideFromRight{
@@ -993,7 +985,7 @@ video {
 }
 
 .animate-slideFromRight{
-  animation: slideFromRight 1s forwards;
+  animation: slideFromRight 1s;
 }
 
 @keyframes slideFromTop{
@@ -1088,10 +1080,6 @@ video {
 
 .overflow-hidden{
   overflow: hidden;
-}
-
-.whitespace-nowrap{
-  white-space: nowrap;
 }
 
 .rounded-3xl{
@@ -1889,12 +1877,6 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.hover\:shadow-xl:hover{
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .hover\:shadow-black:hover{
   --tw-shadow-color: #111111;
   --tw-shadow: var(--tw-shadow-colored);
@@ -2047,10 +2029,6 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.group\/tracker:hover .group-hover\/tracker\:block{
-  display: block;
-}
-
 .group:hover .group-hover\:translate-x-4{
   --tw-translate-x: 1rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2085,20 +2063,16 @@ video {
     display: flex;
   }
 
-  .sm\:h-auto{
-    height: auto;
-  }
-
   .sm\:h-\[90vh\]{
     height: 90vh;
   }
 
-  .sm\:max-h-full{
-    max-height: 100%;
+  .sm\:h-auto{
+    height: auto;
   }
 
-  .sm\:max-h-\[95\%\]{
-    max-height: 95%;
+  .sm\:max-h-full{
+    max-height: 100%;
   }
 
   .sm\:w-1\/3{
@@ -2238,10 +2212,6 @@ video {
 
   .md\:gap-4{
     gap: 1rem;
-  }
-
-  .md\:whitespace-normal{
-    white-space: normal;
   }
 
   .md\:bg-transparent{

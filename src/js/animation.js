@@ -12,15 +12,15 @@ const observer = new IntersectionObserver(
         } else if (
           entry.target.classList.contains("scroll-animation--slideFromLeft")
         ) {
-          entry.target.classList.add("animate-slideFromLeft");
+          entry.target.classList.add("lg:animate-slideFromLeft");
         } else if (
           entry.target.classList.contains("scroll-animation--slideFromRight")
         ) {
-          entry.target.classList.add("animate-slideFromRight");
+          entry.target.classList.add("lg:animate-slideFromRight");
         } else if (
           entry.target.classList.contains("scroll-animation--slideFromBottom")
         ) {
-          entry.target.classList.add("animate-slideFromBottom");
+          entry.target.classList.add("lg:animate-slideFromBottom");
         }
       }
     });
