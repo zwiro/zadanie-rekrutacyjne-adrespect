@@ -30,12 +30,12 @@ function expandCollapseImagesSection(action = "expand") {
   if (action === "expand") {
     expandImagesBtn.classList.replace("flex", "hidden");
     collapseImagesBtn.classList.replace("hidden", "flex");
-    imagesContainer.classList.replace("max-h-[200vh]", "max-h-[1000vh]");
+    imagesContainer.classList.replace("max-h-[210vh]", "max-h-[1000vh]");
     images.forEach((image) => (image.tabIndex = "0"));
   } else if (action === "collapse") {
     expandImagesBtn.classList.replace("hidden", "flex");
     collapseImagesBtn.classList.replace("flex", "hidden");
-    imagesContainer.classList.replace("max-h-[1000vh]", "max-h-[200vh]");
+    imagesContainer.classList.replace("max-h-[1000vh]", "max-h-[210vh]");
     checkIfFocusable();
   }
   toggleMultipleClasses(imagesOverlay, "opacity-0", "pointer-events-none");
@@ -102,6 +102,7 @@ function openSearchbar() {
     searchbar,
     "md:invisible",
     "md:w-0",
+    "md:px-0",
     "lg:w-48",
     "md:w-32",
   );
@@ -121,28 +122,36 @@ function changeHero(direction = "next") {
   isSliding = true;
   if (direction === "next") {
     heroSections.forEach((section) => {
+      const buttons = section.querySelectorAll("a");
       if (section.classList.contains("translate-x-0")) {
+        buttons.forEach((button) => (button.tabIndex = "-1")); // to prevent focusing button on section that is sliding out
         section.classList.replace("translate-x-0", "translate-x-full");
         setTimeout(() => {
           section.classList.toggle("invisible");
         }, 1000);
       } else if (section.classList.contains("-translate-x-full")) {
+        buttons.forEach((button) => (button.tabIndex = ""));
         section.classList.replace("-translate-x-full", "translate-x-0");
         section.classList.toggle("invisible");
       } else if (section.classList.contains("translate-x-full")) {
+        buttons.forEach((button) => (button.tabIndex = ""));
         section.classList.replace("translate-x-full", "-translate-x-full");
       }
     });
   } else {
     heroSections.forEach((section) => {
+      const buttons = section.querySelectorAll("a");
       if (section.classList.contains("translate-x-0")) {
+        buttons.forEach((button) => (button.tabIndex = "-1"));
         section.classList.replace("translate-x-0", "-translate-x-full");
         setTimeout(() => {
           section.classList.toggle("invisible");
         }, 1000);
       } else if (section.classList.contains("-translate-x-full")) {
+        buttons.forEach((button) => (button.tabIndex = ""));
         section.classList.replace("-translate-x-full", "translate-x-full");
       } else if (section.classList.contains("translate-x-full")) {
+        buttons.forEach((button) => (button.tabIndex = ""));
         section.classList.replace("translate-x-full", "translate-x-0");
         section.classList.toggle("invisible");
       }
@@ -153,18 +162,18 @@ function changeHero(direction = "next") {
   }, 1000);
 }
 
-let autoSlide = setInterval(changeHero, 5000);
+let autoSlide = setInterval(changeHero, 10000);
 
 nextHeroBtn.addEventListener("click", () => {
   clearInterval(autoSlide);
   changeHero();
-  autoSlide = setInterval(changeHero, 5000);
+  autoSlide = setInterval(changeHero, 10000);
 });
 
 prevHeroBtn.addEventListener("click", () => {
   clearInterval(autoSlide);
   changeHero("prev");
-  autoSlide = setInterval(changeHero, 5000);
+  autoSlide = setInterval(changeHero, 10000);
 });
 
 // popup image gallery
@@ -242,6 +251,7 @@ function changePopupImage(direction) {
       popupGalleryThumbnails[currentImageIndex].classList.remove("ring");
     }
   }
+  popupImage.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500 });
 }
 
 popupPrevBtn.addEventListener("click", () => changePopupImage("prev"));
@@ -256,6 +266,7 @@ function changeImageByThumbnail(thumbnail) {
       thumbnail.classList.add("ring");
     } else thumbnail.classList.remove("ring");
   });
+  popupImage.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500 });
 }
 
 popupGalleryThumbnails.forEach((thumbnail) => {
