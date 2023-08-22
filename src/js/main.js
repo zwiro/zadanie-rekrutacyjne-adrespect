@@ -30,12 +30,12 @@ function expandCollapseImagesSection(action = "expand") {
   if (action === "expand") {
     expandImagesBtn.classList.replace("flex", "hidden");
     collapseImagesBtn.classList.replace("hidden", "flex");
-    imagesContainer.classList.replace("max-h-[214vh]", "max-h-[1000vh]");
+    imagesContainer.classList.replace("max-h-[1824px]", "max-h-[1000vh]");
     images.forEach((image) => (image.tabIndex = "0"));
   } else if (action === "collapse") {
     expandImagesBtn.classList.replace("hidden", "flex");
     collapseImagesBtn.classList.replace("flex", "hidden");
-    imagesContainer.classList.replace("max-h-[1000vh]", "max-h-[214vh]");
+    imagesContainer.classList.replace("max-h-[1000vh]", "max-h-[1824px]");
     checkIfFocusable();
   }
   toggleMultipleClasses(imagesOverlay, "opacity-0", "pointer-events-none");
